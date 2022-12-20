@@ -1,0 +1,976 @@
+CRITICAL - 2022-09-17 10:08:31 --> Class 'CodeIgniter\Database\Posgre\Connection' not found
+in SYSTEMPATH/Database/Database.php on line 136.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver('Posgre', 'CodeIgniter\\Database\\Posgre\\Connection', [...])
+ 2 SYSTEMPATH/Database/Config.php(78): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH/Model.php(137): CodeIgniter\Database\Config::connect('default')
+ 4 SYSTEMPATH/Config/Factories.php(126): CodeIgniter\Model->__construct(null)
+ 5 SYSTEMPATH/Config/Factories.php(83): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 6 SYSTEMPATH/Common.php(817): CodeIgniter\Config\Factories::models('Myth\\Auth\\Models\\UserModel', [...], null)
+ 7 VENDORPATH/myth/auth/src/Config/Services.php(27): model('Myth\\Auth\\Models\\UserModel')
+ 8 SYSTEMPATH/Config/BaseService.php(253): Myth\Auth\Config\Services::authentication('local', null, null, false)
+ 9 SYSTEMPATH/Config/BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('authentication', [...])
+10 VENDORPATH/myth/auth/src/Config/Services.php(24): CodeIgniter\Config\BaseService::getSharedInstance('authentication', 'local', null, null)
+11 SYSTEMPATH/Config/BaseService.php(253): Myth\Auth\Config\Services::authentication()
+12 SYSTEMPATH/Common.php(967): CodeIgniter\Config\BaseService::__callStatic('authentication', [])
+13 VENDORPATH/myth/auth/src/Filters/BaseFilter.php(42): service('authentication')
+14 SYSTEMPATH/Filters/Filters.php(166): Myth\Auth\Filters\BaseFilter->__construct()
+15 SYSTEMPATH/CodeIgniter.php(431): CodeIgniter\Filters\Filters->run('/', 'before')
+16 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 10:10:07 --> Class 'CodeIgniter\Database\Posgre\Connection' not found
+in SYSTEMPATH/Database/Database.php on line 136.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver('Posgre', 'CodeIgniter\\Database\\Posgre\\Connection', [...])
+ 2 SYSTEMPATH/Database/Config.php(78): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH/Model.php(137): CodeIgniter\Database\Config::connect('default')
+ 4 SYSTEMPATH/Config/Factories.php(126): CodeIgniter\Model->__construct(null)
+ 5 SYSTEMPATH/Config/Factories.php(83): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 6 SYSTEMPATH/Common.php(817): CodeIgniter\Config\Factories::models('Myth\\Auth\\Models\\UserModel', [...], null)
+ 7 VENDORPATH/myth/auth/src/Config/Services.php(27): model('Myth\\Auth\\Models\\UserModel')
+ 8 SYSTEMPATH/Config/BaseService.php(253): Myth\Auth\Config\Services::authentication('local', null, null, false)
+ 9 SYSTEMPATH/Config/BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('authentication', [...])
+10 VENDORPATH/myth/auth/src/Config/Services.php(24): CodeIgniter\Config\BaseService::getSharedInstance('authentication', 'local', null, null)
+11 SYSTEMPATH/Config/BaseService.php(253): Myth\Auth\Config\Services::authentication()
+12 SYSTEMPATH/Common.php(967): CodeIgniter\Config\BaseService::__callStatic('authentication', [])
+13 VENDORPATH/myth/auth/src/Filters/BaseFilter.php(42): service('authentication')
+14 SYSTEMPATH/Filters/Filters.php(166): Myth\Auth\Filters\BaseFilter->__construct()
+15 SYSTEMPATH/CodeIgniter.php(431): CodeIgniter\Filters\Filters->run('/', 'before')
+16 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 10:10:08 --> Class 'CodeIgniter\Database\Posgre\Connection' not found
+in SYSTEMPATH/Database/Database.php on line 136.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver('Posgre', 'CodeIgniter\\Database\\Posgre\\Connection', [...])
+ 2 SYSTEMPATH/Database/Config.php(78): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH/Model.php(137): CodeIgniter\Database\Config::connect('default')
+ 4 SYSTEMPATH/Config/Factories.php(126): CodeIgniter\Model->__construct(null)
+ 5 SYSTEMPATH/Config/Factories.php(83): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 6 SYSTEMPATH/Common.php(817): CodeIgniter\Config\Factories::models('Myth\\Auth\\Models\\UserModel', [...], null)
+ 7 VENDORPATH/myth/auth/src/Config/Services.php(27): model('Myth\\Auth\\Models\\UserModel')
+ 8 SYSTEMPATH/Config/BaseService.php(253): Myth\Auth\Config\Services::authentication('local', null, null, false)
+ 9 SYSTEMPATH/Config/BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('authentication', [...])
+10 VENDORPATH/myth/auth/src/Config/Services.php(24): CodeIgniter\Config\BaseService::getSharedInstance('authentication', 'local', null, null)
+11 SYSTEMPATH/Config/BaseService.php(253): Myth\Auth\Config\Services::authentication()
+12 SYSTEMPATH/Common.php(967): CodeIgniter\Config\BaseService::__callStatic('authentication', [])
+13 VENDORPATH/myth/auth/src/Filters/BaseFilter.php(42): service('authentication')
+14 SYSTEMPATH/Filters/Filters.php(166): Myth\Auth\Filters\BaseFilter->__construct()
+15 SYSTEMPATH/CodeIgniter.php(431): CodeIgniter\Filters\Filters->run('/', 'before')
+16 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+17 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+18 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 10:13:17 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "rekam-medis" does not exist in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:69
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', '/Users/ivan/Cod...', 69, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(69): pg_connect('host=localhost ...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1385): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1419): CodeIgniter\Database\BaseConnection->listTables()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(167): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CLI/Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CLI/CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CLI/CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(900): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#14 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CLI/Console.php(48): CodeIgniter\CodeIgniter->run()
+#16 /Users/ivan/Codeigniter/klinik/spark(98): CodeIgniter\CLI\Console->run()
+#17 {main}
+ERROR - 2022-09-17 10:13:21 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at "localhost" (::1), port 5432 failed: FATAL:  database "rekam-medis" does not exist in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:69
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', '/Users/ivan/Cod...', 69, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(69): pg_connect('host=localhost ...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(382): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1385): CodeIgniter\Database\BaseConnection->query('SELECT "table_n...')
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1419): CodeIgniter\Database\BaseConnection->listTables()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(167): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CLI/Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CLI/CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CLI/CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(900): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#14 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(336): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#15 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CLI/Console.php(48): CodeIgniter\CodeIgniter->run()
+#16 /Users/ivan/Codeigniter/klinik/spark(98): CodeIgniter\CLI\Console->run()
+#17 {main}
+CRITICAL - 2022-09-17 10:23:31 --> Undefined offset: 0
+in APPPATH/Controllers/BaseController.php on line 60.
+ 1 APPPATH/Controllers/BaseController.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH/Controllers/BaseController.php', 60, [...])
+ 2 ROOTPATH/modules/Dashboard/Controllers/Dashboard.php(16): App\Controllers\BaseController->fetchMenu()
+ 3 SYSTEMPATH/CodeIgniter.php(907): Modules\Dashboard\Controllers\Dashboard->index()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dashboard\Controllers\Dashboard))
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 10:36:08 --> Invalid argument supplied for foreach()
+in APPPATH/Controllers/BaseController.php on line 72.
+ 1 APPPATH/Controllers/BaseController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH/Controllers/BaseController.php', 72, [...])
+ 2 ROOTPATH/modules/Dashboard/Controllers/Dashboard.php(16): App\Controllers\BaseController->fetchMenu()
+ 3 SYSTEMPATH/CodeIgniter.php(907): Modules\Dashboard\Controllers\Dashboard->index()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dashboard\Controllers\Dashboard))
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 10:48:02 --> Allowed memory size of 134217728 bytes exhausted (tried to allocate 4096 bytes)
+in ROOTPATH/modules/Poli/Controllers/Poli.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-17 10:49:24 --> Undefined variable: menu
+in ROOTPATH/modules/Poli/Views/poli.php on line 5.
+ 1 ROOTPATH/modules/Poli/Views/poli.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'ROOTPATH/modules/Poli/Views/poli.php', 5, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Poli/Views/poli.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Poli\\Views\\poli', [], true)
+ 5 ROOTPATH/modules/Poli/Controllers/Poli.php(27): view('Modules\\Poli\\Views\\poli', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 11:03:46 --> Undefined variable: pager
+in ROOTPATH/modules/Poli/Views/poli.php on line 49.
+ 1 ROOTPATH/modules/Poli/Views/poli.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pager', 'ROOTPATH/modules/Poli/Views/poli.php', 49, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Poli/Views/poli.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Poli\\Views\\poli', [], true)
+ 5 ROOTPATH/modules/Poli/Controllers/Poli.php(28): view('Modules\\Poli\\Views\\poli', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 11:30:35 --> Undefined property: Modules\Poli\Controllers\Poli::$poliModel
+in ROOTPATH/modules/Poli/Controllers/Poli.php on line 25.
+ 1 ROOTPATH/modules/Poli/Controllers/Poli.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: Modules\\Poli\\Controllers\\Poli::$poliModel', 'ROOTPATH/modules/Poli/Controllers/Poli.php', 25, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 11:33:47 --> Undefined property: Modules\Poli\Controllers\Poli::$poliModel
+in ROOTPATH/modules/Poli/Controllers/Poli.php on line 25.
+ 1 ROOTPATH/modules/Poli/Controllers/Poli.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: Modules\\Poli\\Controllers\\Poli::$poliModel', 'ROOTPATH/modules/Poli/Controllers/Poli.php', 25, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 12:02:02 --> Call to a member function insert() on null
+in ROOTPATH/modules/Poli/Controllers/Poli.php on line 54.
+ 1 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->add()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 12:02:14 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;poliCretatedBy&quot; of relation &quot;poli&quot; violates not-null constraint
+DETAIL:  Failing row contains (1, 3101dff5-c4f0-4d38-85f6-f86c1af5b131, Mata, null, 2022-09-17, null, 2022-09-17, null). in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'INSERT INTO "po...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "po...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "po...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "po...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Poli/Controllers/Poli.php(54): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->add()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-17 12:02:14 --> pg_query(): Query failed: ERROR:  null value in column &quot;poliCretatedBy&quot; of relation &quot;poli&quot; violates not-null constraint
+DETAIL:  Failing row contains (1, 3101dff5-c4f0-4d38-85f6-f86c1af5b131, Mata, null, 2022-09-17, null, 2022-09-17, null).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;poliCretatedBy&quot; of relation &quot;poli&quot; violates not-null constraint
+DETAIL:  Failing row contains (1, 3101dff5-c4f0-4d38-85f6-f86c1af5b131, Mata, null, 2022-09-17, null, 2022-09-17, null).', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "poli" ("uuid", "poliName", "poliCreatedDate", "poliModifiedDate") VALUES (\'3101dff5-c4f0-4d38-85f6-f86c1af5b131\', \'Mata\', \'2022-09-17 12:02:14\', \'2022-09-17 12:02:14\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "poli" ("uuid", "poliName", "poliCreatedDate", "poliModifiedDate") VALUES (\'3101dff5-c4f0-4d38-85f6-f86c1af5b131\', \'Mata\', \'2022-09-17 12:02:14\', \'2022-09-17 12:02:14\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "poli" ("uuid", "poliName", "poliCreatedDate", "poliModifiedDate") VALUES (\'3101dff5-c4f0-4d38-85f6-f86c1af5b131\', \'Mata\', \'2022-09-17 12:02:14\', \'2022-09-17 12:02:14\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "poli" ("uuid", "poliName", "poliCreatedDate", "poliModifiedDate") VALUES (:uuid:, :poliName:, :poliCreatedDate:, :poliModifiedDate:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Poli/Controllers/Poli.php(54): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->add()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 12:05:05 --> Undefined property: stdClass::$user_id
+in ROOTPATH/modules/Poli/Views/poli.php on line 57.
+ 1 ROOTPATH/modules/Poli/Views/poli.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$user_id', 'ROOTPATH/modules/Poli/Views/poli.php', 57, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Poli/Views/poli.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Poli\\Views\\poli', [], true)
+ 5 ROOTPATH/modules/Poli/Controllers/Poli.php(37): view('Modules\\Poli\\Views\\poli', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 12:16:35 --> Undefined property: stdClass::$sesiNama
+in ROOTPATH/modules/Poli/Views/poli.php on line 148.
+ 1 ROOTPATH/modules/Poli/Views/poli.php(148): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$sesiNama', 'ROOTPATH/modules/Poli/Views/poli.php', 148, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Poli/Views/poli.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Poli\\Views\\poli', [], true)
+ 5 ROOTPATH/modules/Poli/Controllers/Poli.php(37): view('Modules\\Poli\\Views\\poli', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 12:17:40 --> Undefined property: stdClass::$sesiId
+in ROOTPATH/modules/Poli/Views/poli.php on line 152.
+ 1 ROOTPATH/modules/Poli/Views/poli.php(152): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$sesiId', 'ROOTPATH/modules/Poli/Views/poli.php', 152, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Poli/Views/poli.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Poli\\Views\\poli', [], true)
+ 5 ROOTPATH/modules/Poli/Controllers/Poli.php(37): view('Modules\\Poli\\Views\\poli', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 12:22:34 --> Too few arguments to function Modules\Poli\Controllers\Poli::edit(), 0 passed in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php on line 907 and exactly 1 expected
+in ROOTPATH/modules/Poli/Controllers/Poli.php on line 61.
+ 1 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->edit()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 12:24:27 --> Too few arguments to function Modules\Poli\Controllers\Poli::edit(), 0 passed in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php on line 907 and exactly 1 expected
+in ROOTPATH/modules/Poli/Controllers/Poli.php on line 61.
+ 1 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->edit()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 13:39:08 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;dokter&quot; does not exist
+LINE 2: FROM &quot;dokter&quot;
+             ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT COUNT(*)...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*)...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+#7 /Users/ivan/Codeigniter/klinik/modules/Dokter/Controllers/Dokter.php(31): CodeIgniter\BaseModel->paginate(20, 'dokter')
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Dokter\Controllers\Dokter->index()
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dokter\Controllers\Dokter))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-17 13:39:08 --> pg_query(): Query failed: ERROR:  relation &quot;dokter&quot; does not exist
+LINE 2: FROM &quot;dokter&quot;
+             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;dokter&quot; does not exist
+LINE 2: FROM &quot;dokter&quot;
+             ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT COUNT(*) AS "numrows"
+FROM "dokter"
+WHERE "dokter"."dokterDeletedDate" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*) AS "numrows"
+FROM "dokter"
+WHERE "dokter"."dokterDeletedDate" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS "numrows"
+FROM "dokter"
+WHERE "dokter"."dokterDeletedDate" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS "numrows"
+FROM "dokter"
+WHERE "dokter"."dokterDeletedDate" IS NULL', [], false)
+ 6 SYSTEMPATH/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 7 SYSTEMPATH/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+ 8 ROOTPATH/modules/Dokter/Controllers/Dokter.php(31): CodeIgniter\BaseModel->paginate(20, 'dokter')
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Dokter\Controllers\Dokter->index()
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dokter\Controllers\Dokter))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 13:43:38 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;dokter&quot; does not exist
+LINE 2: FROM &quot;dokter&quot;
+             ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT COUNT(*)...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*)...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+#7 /Users/ivan/Codeigniter/klinik/modules/Dokter/Controllers/Dokter.php(31): CodeIgniter\BaseModel->paginate(20, 'dokter')
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Dokter\Controllers\Dokter->index()
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dokter\Controllers\Dokter))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-17 13:43:38 --> pg_query(): Query failed: ERROR:  relation &quot;dokter&quot; does not exist
+LINE 2: FROM &quot;dokter&quot;
+             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;dokter&quot; does not exist
+LINE 2: FROM &quot;dokter&quot;
+             ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT COUNT(*) AS "numrows"
+FROM "dokter"
+WHERE "dokter"."dokterDeletedDate" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*) AS "numrows"
+FROM "dokter"
+WHERE "dokter"."dokterDeletedDate" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS "numrows"
+FROM "dokter"
+WHERE "dokter"."dokterDeletedDate" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS "numrows"
+FROM "dokter"
+WHERE "dokter"."dokterDeletedDate" IS NULL', [], false)
+ 6 SYSTEMPATH/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 7 SYSTEMPATH/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+ 8 ROOTPATH/modules/Dokter/Controllers/Dokter.php(31): CodeIgniter\BaseModel->paginate(20, 'dokter')
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Dokter\Controllers\Dokter->index()
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dokter\Controllers\Dokter))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 13:46:00 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;0e956679-e11b-4862-8867-e2c3dab7fb9a&quot;
+LINE 1: ...dokterCreatedDate&quot;, &quot;dokterModifiedDate&quot;) VALUES ('0e956679-...
+                                                             ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'INSERT INTO "do...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "do...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "do...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "do...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Dokter/Controllers/Dokter.php(55): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Dokter\Controllers\Dokter->add()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dokter\Controllers\Dokter))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-17 13:46:00 --> pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;0e956679-e11b-4862-8867-e2c3dab7fb9a&quot;
+LINE 1: ...dokterCreatedDate&quot;, &quot;dokterModifiedDate&quot;) VALUES ('0e956679-...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  invalid input syntax for type integer: &quot;0e956679-e11b-4862-8867-e2c3dab7fb9a&quot;
+LINE 1: ...dokterCreatedDate&quot;, &quot;dokterModifiedDate&quot;) VALUES (\'0e956679-...
+                                                             ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "dokter" ("uuid", "dokterName", "dokterCretatedBy", "dokterCreatedDate", "dokterModifiedDate") VALUES (\'0e956679-e11b-4862-8867-e2c3dab7fb9a\', \'Dr. Irvan Sp. THT\', \'august.ivan20@gmail.com\', \'2022-09-17 13:46:00\', \'2022-09-17 13:46:00\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "dokter" ("uuid", "dokterName", "dokterCretatedBy", "dokterCreatedDate", "dokterModifiedDate") VALUES (\'0e956679-e11b-4862-8867-e2c3dab7fb9a\', \'Dr. Irvan Sp. THT\', \'august.ivan20@gmail.com\', \'2022-09-17 13:46:00\', \'2022-09-17 13:46:00\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "dokter" ("uuid", "dokterName", "dokterCretatedBy", "dokterCreatedDate", "dokterModifiedDate") VALUES (\'0e956679-e11b-4862-8867-e2c3dab7fb9a\', \'Dr. Irvan Sp. THT\', \'august.ivan20@gmail.com\', \'2022-09-17 13:46:00\', \'2022-09-17 13:46:00\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "dokter" ("uuid", "dokterName", "dokterCretatedBy", "dokterCreatedDate", "dokterModifiedDate") VALUES (:uuid:, :dokterName:, :dokterCretatedBy:, :dokterCreatedDate:, :dokterModifiedDate:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Dokter/Controllers/Dokter.php(55): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Dokter\Controllers\Dokter->add()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dokter\Controllers\Dokter))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 14:34:22 --> ErrorException: pg_query(): Query failed: ERROR:  column penempatan.penempatanDeletedDate does not exist
+LINE 3: WHERE &quot;penempatan&quot;.&quot;penempatanDeletedDate&quot; IS NULL
+              ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT COUNT(*)...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*)...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+#7 /Users/ivan/Codeigniter/klinik/modules/Penempatan/Controllers/Penempatan.php(31): CodeIgniter\BaseModel->paginate(20, 'penempatan')
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-17 14:34:22 --> pg_query(): Query failed: ERROR:  column penempatan.penempatanDeletedDate does not exist
+LINE 3: WHERE &quot;penempatan&quot;.&quot;penempatanDeletedDate&quot; IS NULL
+              ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column penempatan.penempatanDeletedDate does not exist
+LINE 3: WHERE &quot;penempatan&quot;.&quot;penempatanDeletedDate&quot; IS NULL
+              ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL', [], false)
+ 6 SYSTEMPATH/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 7 SYSTEMPATH/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+ 8 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(31): CodeIgniter\BaseModel->paginate(20, 'penempatan')
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 14:42:41 --> Undefined property: stdClass::$penempatanName
+in ROOTPATH/modules/Penempatan/Views/penempatan.php on line 64.
+ 1 ROOTPATH/modules/Penempatan/Views/penempatan.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$penempatanName', 'ROOTPATH/modules/Penempatan/Views/penempatan.php', 64, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Penempatan/Views/penempatan.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Penempatan\\Views\\penempatan', [], true)
+ 5 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(37): view('Modules\\Penempatan\\Views\\penempatan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 14:43:21 --> Undefined property: stdClass::$penempatanName
+in ROOTPATH/modules/Penempatan/Views/penempatan.php on line 132.
+ 1 ROOTPATH/modules/Penempatan/Views/penempatan.php(132): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$penempatanName', 'ROOTPATH/modules/Penempatan/Views/penempatan.php', 132, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Penempatan/Views/penempatan.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Penempatan\\Views\\penempatan', [], true)
+ 5 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(37): view('Modules\\Penempatan\\Views\\penempatan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 15:08:19 --> There is no data to insert.
+in SYSTEMPATH/BaseModel.php on line 718.
+ 1 SYSTEMPATH/BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([], true)
+ 3 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(63): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+ 5 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 15:09:01 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;penempatan&quot; does not exist
+LINE 1: INSERT INTO &quot;penempatan&quot; (&quot;dokterId&quot;, &quot;poliId&quot;, &quot;created_at&quot;...
+                                                        ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'INSERT INTO "pe...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pe...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pe...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pe...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Penempatan/Controllers/Penempatan.php(62): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-17 15:09:01 --> pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;penempatan&quot; does not exist
+LINE 1: INSERT INTO &quot;penempatan&quot; (&quot;dokterId&quot;, &quot;poliId&quot;, &quot;created_at&quot;...
+                                                        ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;penempatan&quot; does not exist
+LINE 1: INSERT INTO &quot;penempatan&quot; (&quot;dokterId&quot;, &quot;poliId&quot;, &quot;created_at&quot;...
+                                                        ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "penempatan" ("dokterId", "poliId", "created_at", "updated_at") VALUES (\'2\', \'4\', \'2022-09-17 15:09:01\', \'2022-09-17 15:09:01\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "penempatan" ("dokterId", "poliId", "created_at", "updated_at") VALUES (\'2\', \'4\', \'2022-09-17 15:09:01\', \'2022-09-17 15:09:01\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "penempatan" ("dokterId", "poliId", "created_at", "updated_at") VALUES (\'2\', \'4\', \'2022-09-17 15:09:01\', \'2022-09-17 15:09:01\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "penempatan" ("dokterId", "poliId", "created_at", "updated_at") VALUES (:dokterId:, :poliId:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(62): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 15:14:07 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 3, null, null, 2022-09-17 15:14:07, null, 2022-09-17 15:14:07, null). in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #18, 'INSERT INTO "pe...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pe...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pe...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pe...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Penempatan/Controllers/Penempatan.php(62): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-17 15:14:07 --> pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 3, null, null, 2022-09-17 15:14:07, null, 2022-09-17 15:14:07, null).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 3, null, null, 2022-09-17 15:14:07, null, 2022-09-17 15:14:07, null).', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "penempatan" ("dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'2\', \'4\', \'2022-09-17 15:14:07\', \'2022-09-17 15:14:07\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "penempatan" ("dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'2\', \'4\', \'2022-09-17 15:14:07\', \'2022-09-17 15:14:07\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "penempatan" ("dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'2\', \'4\', \'2022-09-17 15:14:07\', \'2022-09-17 15:14:07\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "penempatan" ("dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (:dokterId:, :poliId:, :penempatanCreatedDate:, :penampatanModifiedDate:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(62): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 15:14:53 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 4, null, august.ivan20@gmail.com, 2022-09-17 15:14:53, null, 2022-09-17 15:14:53, null). in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'INSERT INTO "pe...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pe...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pe...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pe...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Penempatan/Controllers/Penempatan.php(64): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-17 15:14:53 --> pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 4, null, august.ivan20@gmail.com, 2022-09-17 15:14:53, null, 2022-09-17 15:14:53, null).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 4, null, august.ivan20@gmail.com, 2022-09-17 15:14:53, null, 2022-09-17 15:14:53, null).', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:14:53\', \'2022-09-17 15:14:53\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:14:53\', \'2022-09-17 15:14:53\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:14:53\', \'2022-09-17 15:14:53\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (:penempatanCretatedBy:, :dokterId:, :poliId:, :penempatanCreatedDate:, :penampatanModifiedDate:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(64): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 15:15:48 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 5, null, august.ivan20@gmail.com, 2022-09-17 15:15:48, null, 2022-09-17 15:15:48, null). in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'INSERT INTO "pe...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pe...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pe...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pe...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Penempatan/Controllers/Penempatan.php(64): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-17 15:15:48 --> pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 5, null, august.ivan20@gmail.com, 2022-09-17 15:15:48, null, 2022-09-17 15:15:48, null).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 5, null, august.ivan20@gmail.com, 2022-09-17 15:15:48, null, 2022-09-17 15:15:48, null).', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:15:48\', \'2022-09-17 15:15:48\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:15:48\', \'2022-09-17 15:15:48\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:15:48\', \'2022-09-17 15:15:48\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (:penempatanCretatedBy:, :dokterId:, :poliId:, :penempatanCreatedDate:, :penampatanModifiedDate:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(64): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 15:16:25 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 6, null, august.ivan20@gmail.com, 2022-09-17 15:16:25, null, 2022-09-17 15:16:25, null). in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'INSERT INTO "pe...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pe...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pe...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pe...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Penempatan/Controllers/Penempatan.php(64): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-17 15:16:25 --> pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 6, null, august.ivan20@gmail.com, 2022-09-17 15:16:25, null, 2022-09-17 15:16:25, null).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 6, null, august.ivan20@gmail.com, 2022-09-17 15:16:25, null, 2022-09-17 15:16:25, null).', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:16:25\', \'2022-09-17 15:16:25\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:16:25\', \'2022-09-17 15:16:25\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:16:25\', \'2022-09-17 15:16:25\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (:penempatanCretatedBy:, :dokterId:, :poliId:, :penempatanCreatedDate:, :penampatanModifiedDate:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(64): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 15:16:57 --> ErrorException: pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 7, null, august.ivan20@gmail.com, 2022-09-17 15:16:57, null, 2022-09-17 15:16:57, null). in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'INSERT INTO "pe...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pe...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pe...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pe...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Penempatan/Controllers/Penempatan.php(64): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-17 15:16:57 --> pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 7, null, august.ivan20@gmail.com, 2022-09-17 15:16:57, null, 2022-09-17 15:16:57, null).
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  null value in column &quot;uuid&quot; of relation &quot;penempatan&quot; violates not-null constraint
+DETAIL:  Failing row contains (4, 2, 7, null, august.ivan20@gmail.com, 2022-09-17 15:16:57, null, 2022-09-17 15:16:57, null).', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:16:57\', \'2022-09-17 15:16:57\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:16:57\', \'2022-09-17 15:16:57\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (\'august.ivan20@gmail.com\', \'2\', \'4\', \'2022-09-17 15:16:57\', \'2022-09-17 15:16:57\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "penempatan" ("penempatanCretatedBy", "dokterId", "poliId", "penempatanCreatedDate", "penampatanModifiedDate") VALUES (:penempatanCretatedBy:, :dokterId:, :poliId:, :penempatanCreatedDate:, :penampatanModifiedDate:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(64): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->add()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 15:36:06 --> Cannot use object of type Modules\Penempatan\Models\PenempatanModel as array
+in ROOTPATH/modules/Penempatan/Controllers/Penempatan.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 15:36:08 --> Cannot use object of type Modules\Penempatan\Models\PenempatanModel as array
+in ROOTPATH/modules/Penempatan/Controllers/Penempatan.php on line 44.
+ 1 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 15:53:43 --> ErrorException: pg_query(): Query failed: ERROR:  column poli.id does not exist
+LINE 3: LEFT JOIN &quot;poli&quot; ON &quot;poli&quot;.&quot;id&quot; = &quot;penempatan&quot;.&quot;poliId&quot;
+                            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #18, 'SELECT COUNT(*)...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*)...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+#7 /Users/ivan/Codeigniter/klinik/modules/Penempatan/Controllers/Penempatan.php(36): CodeIgniter\BaseModel->paginate(20, 'penempatan')
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-17 15:53:43 --> pg_query(): Query failed: ERROR:  column poli.id does not exist
+LINE 3: LEFT JOIN &quot;poli&quot; ON &quot;poli&quot;.&quot;id&quot; = &quot;penempatan&quot;.&quot;poliId&quot;
+                            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column poli.id does not exist
+LINE 3: LEFT JOIN &quot;poli&quot; ON &quot;poli&quot;.&quot;id&quot; = &quot;penempatan&quot;.&quot;poliId&quot;
+                            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+LEFT JOIN "poli" ON "poli"."id" = "penempatan"."poliId"
+LEFT JOIN "dokter" ON "dokter"."id" = "penempatan"."dokterId"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+LEFT JOIN "poli" ON "poli"."id" = "penempatan"."poliId"
+LEFT JOIN "dokter" ON "dokter"."id" = "penempatan"."dokterId"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+LEFT JOIN "poli" ON "poli"."id" = "penempatan"."poliId"
+LEFT JOIN "dokter" ON "dokter"."id" = "penempatan"."dokterId"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+LEFT JOIN "poli" ON "poli"."id" = "penempatan"."poliId"
+LEFT JOIN "dokter" ON "dokter"."id" = "penempatan"."dokterId"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL', [], false)
+ 6 SYSTEMPATH/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 7 SYSTEMPATH/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+ 8 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(36): CodeIgniter\BaseModel->paginate(20, 'penempatan')
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 15:54:06 --> ErrorException: pg_query(): Query failed: ERROR:  column poli.id does not exist
+LINE 3: LEFT JOIN &quot;poli&quot; ON &quot;poli&quot;.&quot;id&quot; = &quot;penempatan&quot;.&quot;poliId&quot;
+                            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT COUNT(*)...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*)...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+#7 /Users/ivan/Codeigniter/klinik/modules/Penempatan/Controllers/Penempatan.php(36): CodeIgniter\BaseModel->paginate(20, 'penempatan')
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-17 15:54:06 --> pg_query(): Query failed: ERROR:  column poli.id does not exist
+LINE 3: LEFT JOIN &quot;poli&quot; ON &quot;poli&quot;.&quot;id&quot; = &quot;penempatan&quot;.&quot;poliId&quot;
+                            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column poli.id does not exist
+LINE 3: LEFT JOIN &quot;poli&quot; ON &quot;poli&quot;.&quot;id&quot; = &quot;penempatan&quot;.&quot;poliId&quot;
+                            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+LEFT JOIN "poli" ON "poli"."id" = "penempatan"."poliId"
+LEFT JOIN "dokter" ON "dokter"."id" = "penempatan"."dokterId"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+LEFT JOIN "poli" ON "poli"."id" = "penempatan"."poliId"
+LEFT JOIN "dokter" ON "dokter"."id" = "penempatan"."dokterId"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+LEFT JOIN "poli" ON "poli"."id" = "penempatan"."poliId"
+LEFT JOIN "dokter" ON "dokter"."id" = "penempatan"."dokterId"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS "numrows"
+FROM "penempatan"
+LEFT JOIN "poli" ON "poli"."id" = "penempatan"."poliId"
+LEFT JOIN "dokter" ON "dokter"."id" = "penempatan"."dokterId"
+WHERE "penempatan"."penempatanDeletedDate" IS NULL', [], false)
+ 6 SYSTEMPATH/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 7 SYSTEMPATH/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+ 8 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(36): CodeIgniter\BaseModel->paginate(20, 'penempatan')
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 15:56:01 --> Undefined property: stdClass::$id
+in ROOTPATH/modules/Penempatan/Views/penempatan.php on line 106.
+ 1 ROOTPATH/modules/Penempatan/Views/penempatan.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id', 'ROOTPATH/modules/Penempatan/Views/penempatan.php', 106, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Penempatan/Views/penempatan.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Penempatan\\Views\\penempatan', [], true)
+ 5 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(45): view('Modules\\Penempatan\\Views\\penempatan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 15:56:59 --> Undefined property: stdClass::$id
+in ROOTPATH/modules/Penempatan/Views/penempatan.php on line 115.
+ 1 ROOTPATH/modules/Penempatan/Views/penempatan.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id', 'ROOTPATH/modules/Penempatan/Views/penempatan.php', 115, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Penempatan/Views/penempatan.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Penempatan\\Views\\penempatan', [], true)
+ 5 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(45): view('Modules\\Penempatan\\Views\\penempatan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 15:57:14 --> Undefined property: stdClass::$id
+in ROOTPATH/modules/Penempatan/Views/penempatan.php on line 68.
+ 1 ROOTPATH/modules/Penempatan/Views/penempatan.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id', 'ROOTPATH/modules/Penempatan/Views/penempatan.php', 68, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Penempatan/Views/penempatan.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Penempatan\\Views\\penempatan', [], true)
+ 5 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(45): view('Modules\\Penempatan\\Views\\penempatan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 15:57:41 --> Undefined property: stdClass::$id
+in ROOTPATH/modules/Penempatan/Views/penempatan.php on line 133.
+ 1 ROOTPATH/modules/Penempatan/Views/penempatan.php(133): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id', 'ROOTPATH/modules/Penempatan/Views/penempatan.php', 133, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Penempatan/Views/penempatan.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Penempatan\\Views\\penempatan', [], true)
+ 5 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(45): view('Modules\\Penempatan\\Views\\penempatan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 15:57:55 --> Undefined property: stdClass::$id
+in ROOTPATH/modules/Penempatan/Views/penempatan.php on line 142.
+ 1 ROOTPATH/modules/Penempatan/Views/penempatan.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id', 'ROOTPATH/modules/Penempatan/Views/penempatan.php', 142, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Penempatan/Views/penempatan.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Penempatan\\Views\\penempatan', [], true)
+ 5 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(45): view('Modules\\Penempatan\\Views\\penempatan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 15:58:15 --> Undefined property: stdClass::$id
+in ROOTPATH/modules/Penempatan/Views/penempatan.php on line 151.
+ 1 ROOTPATH/modules/Penempatan/Views/penempatan.php(151): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id', 'ROOTPATH/modules/Penempatan/Views/penempatan.php', 151, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Penempatan/Views/penempatan.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Penempatan\\Views\\penempatan', [], true)
+ 5 ROOTPATH/modules/Penempatan/Controllers/Penempatan.php(45): view('Modules\\Penempatan\\Views\\penempatan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Penempatan\Controllers\Penempatan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Penempatan\Controllers\Penempatan))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 16:06:55 --> Undefined variable: menu
+in ROOTPATH/modules/Maintenance/Views/maintenance.php on line 5.
+ 1 ROOTPATH/modules/Maintenance/Views/maintenance.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'ROOTPATH/modules/Maintenance/Views/maintenance.php', 5, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Maintenance/Views/maintenance.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Maintenance\\Views\\maintenance', [], true)
+ 5 ROOTPATH/modules/Maintenance/Controllers/Maintenance.php(20): view('Modules\\Maintenance\\Views\\maintenance', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Maintenance\Controllers\Maintenance->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Maintenance\Controllers\Maintenance))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 19:05:43 --> Undefined variable: menu
+in ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php on line 5.
+ 1 ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php(5): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php', 5, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Pendaftaran\\Views\\pendaftaran', [], true)
+ 5 ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php(27): view('Modules\\Pendaftaran\\Views\\pendaftaran', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-17 19:14:05 --> ErrorException: pg_query(): Query failed: ERROR:  column poli.id does not exist
+LINE 4: ORDER BY &quot;poli&quot;.&quot;id&quot; DESC
+                 ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(20, 0)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(1089): CodeIgniter\BaseModel->findAll(20, 0)
+#8 /Users/ivan/Codeigniter/klinik/modules/Poli/Controllers/Poli.php(31): CodeIgniter\BaseModel->paginate(20, 'poli')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->index()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-17 19:14:05 --> pg_query(): Query failed: ERROR:  column poli.id does not exist
+LINE 4: ORDER BY &quot;poli&quot;.&quot;id&quot; DESC
+                 ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column poli.id does not exist
+LINE 4: ORDER BY &quot;poli&quot;.&quot;id&quot; DESC
+                 ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "poli"
+WHERE "poli"."poliDeletedDate" IS NULL
+ORDER BY "poli"."id" DESC
+ LIMIT 20')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "poli"
+WHERE "poli"."poliDeletedDate" IS NULL
+ORDER BY "poli"."id" DESC
+ LIMIT 20')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "poli"
+WHERE "poli"."poliDeletedDate" IS NULL
+ORDER BY "poli"."id" DESC
+ LIMIT 20')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "poli"
+WHERE "poli"."poliDeletedDate" IS NULL
+ORDER BY "poli"."id" DESC
+ LIMIT 20', [], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(20, 0)
+ 8 SYSTEMPATH/BaseModel.php(1089): CodeIgniter\BaseModel->findAll(20, 0)
+ 9 ROOTPATH/modules/Poli/Controllers/Poli.php(31): CodeIgniter\BaseModel->paginate(20, 'poli')
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Poli\Controllers\Poli->index()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Poli\Controllers\Poli))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 19:40:22 --> Undefined variable: pager
+in ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php on line 93.
+ 1 ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pager', 'ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php', 93, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Pendaftaran\\Views\\pendaftaran', [], true)
+ 5 ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php(28): view('Modules\\Pendaftaran\\Views\\pendaftaran', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-17 20:07:06 --> Undefined variable: poli
+in ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php on line 47.
+ 1 ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: poli', 'ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php', 47, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Pendaftaran/Views/pendaftaran.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Pendaftaran\\Views\\pendaftaran', [], true)
+ 5 ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php(28): view('Modules\\Pendaftaran\\Views\\pendaftaran', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')

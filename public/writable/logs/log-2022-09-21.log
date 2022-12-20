@@ -1,0 +1,62 @@
+CRITICAL - 2022-09-21 10:00:25 --> Call to undefined method Modules\Pemeriksaan\Models\PemeriksaanModel::getResult
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pemeriksaan/Controllers/Pemeriksaan.php(42): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pemeriksaan\Controllers\Pemeriksaan->getById('10')
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pemeriksaan\Controllers\Pemeriksaan))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-21 10:01:16 --> Call to undefined method Modules\Pemeriksaan\Models\PemeriksaanModel::getResult
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pemeriksaan/Controllers/Pemeriksaan.php(42): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pemeriksaan\Controllers\Pemeriksaan->getById('pasien', '10')
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pemeriksaan\Controllers\Pemeriksaan))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-21 10:03:11 --> Call to undefined method Modules\Pemeriksaan\Models\PemeriksaanModel::getResult
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pemeriksaan/Controllers/Pemeriksaan.php(42): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pemeriksaan\Controllers\Pemeriksaan->getById('pasien', '10')
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pemeriksaan\Controllers\Pemeriksaan))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-21 10:03:30 --> Call to undefined method Modules\Pemeriksaan\Models\PemeriksaanModel::getResult
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pemeriksaan/Controllers/Pemeriksaan.php(42): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pemeriksaan\Controllers\Pemeriksaan->getById('pasien', '10')
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pemeriksaan\Controllers\Pemeriksaan))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-21 10:04:06 --> Call to undefined method CodeIgniter\Database\Postgre\Result::findAll()
+in ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->index()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-21 10:04:14 --> Call to undefined method CodeIgniter\Database\Postgre\Result::findAll()
+in ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php on line 38.
+ 1 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->index()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-21 10:14:00 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-21 10:14:04 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')

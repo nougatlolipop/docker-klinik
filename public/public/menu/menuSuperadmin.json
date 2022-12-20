@@ -1,0 +1,109 @@
+[{
+        "id": "1",
+        "nama": "Home",
+        "parent": "0",
+        "level": "title",
+        "status": true,
+        "icon": "",
+        "pages": ""
+    },
+    {
+        "id": "2",
+        "nama": "Dashboard",
+        "parent": "1",
+        "level": "child",
+        "status": true,
+        "icon": "fas fa-home",
+        "pages": "/dashboard"
+    },
+    {
+        "id": "3",
+        "nama": "Data",
+        "parent": "0",
+        "level": "title",
+        "status": true,
+        "icon": "",
+        "pages": ""
+    },
+    {
+        "id": "4",
+        "nama": "Poli",
+        "parent": "3",
+        "level": "child",
+        "status": true,
+        "icon": "fas fa-building",
+        "pages": "/poli"
+    },
+    {
+        "id": "5",
+        "nama": "Dokter",
+        "parent": "3",
+        "level": "child",
+        "status": true,
+        "icon": "fas fa-user-md",
+        "pages": "/dokter"
+    },
+    {
+        "id": "7",
+        "nama": "Setting",
+        "parent": "0",
+        "level": "title",
+        "status": true,
+        "icon": "",
+        "pages": ""
+    },
+    {
+        "id": "8",
+        "nama": "Penempatan",
+        "parent": "7",
+        "level": "child",
+        "status": true,
+        "icon": "fas fa-map-signs",
+        "pages": "/penempatan"
+    },
+    {
+        "id": "9",
+        "nama": "Administrasi",
+        "parent": "0",
+        "level": "title",
+        "status": true,
+        "icon": "",
+        "pages": ""
+    },
+    {
+        "id": "10",
+        "nama": "Pendaftaran Pasien",
+        "parent": "9",
+        "level": "child",
+        "status": true,
+        "icon": "fas fa-edit",
+        "pages": "/pendaftaran"
+    },
+    {
+        "id": "11",
+        "nama": "Pemeriksaan",
+        "parent": "9",
+        "level": "child",
+        "status": true,
+        "icon": "fas fa-stethoscope",
+        "pages": "/pemeriksaan"
+    },
+    {
+        "id": "12",
+        "nama": "User",
+        "parent": "0",
+        "level": "title",
+        "status": true,
+        "icon": "",
+        "pages": ""
+    },
+    {
+        "id": "13",
+        "nama": "Manajemen Akun",
+        "parent": "12",
+        "level": "child",
+        "status": true,
+        "icon": "fas fa-user",
+        "pages": "/manajemenAkun"
+    }
+]

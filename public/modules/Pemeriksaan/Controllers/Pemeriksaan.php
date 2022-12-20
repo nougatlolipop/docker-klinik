@@ -1,0 +1,104 @@
+<?php
+
+/* 
+This is Controller Krs
+ */
+
+namespace Modules\Pemeriksaan\Controllers;
+
+use App\Controllers\BaseController;
+use Modules\Pemeriksaan\Models\PemeriksaanModel;
+
+
+class Pemeriksaan extends BaseController
+{
+    protected $pemeriksaanModel;
+
+    public function __construct()
+    {
+        $this->pemeriksaanModel = new PemeriksaanModel();
+    }
+
+    public function index()
+    {
+        $currentPage = $this->request->getVar('page_pemeriksaan') ? $this->request->getVar('page_pemeriksaan') : 1;
+        $keyword = $this->request->getVar('keyword');
+        $email = user()->email;
+        $pemeriksaan = $this->pemeriksaanModel->getPemeriksaan($email, $keyword);
+        $data = [
+            'menu' => $this->fetchMenu(),
+            'title' => "Pemeriksaan",
+            'breadcrumb' => ['Data', 'Pemeriksaan'],
+            'pemeriksaan' => $pemeriksaan->paginate($this->numberPage, 'pemeriksaan'),
+            'currentPage' => $currentPage,
+            'numberPage' => $this->numberPage,
+            'pager' => $pemeriksaan->pager,
+            'validation' => \Config\Services::validation(),
+        ];
+        return view('Modules\Pemeriksaan\Views\pemeriksaan', $data);
+    }
+
+    public function getById($nik)
+    {
+        $pemeriksaan = $this->pemeriksaanModel->getById(['nik' => $nik])->findAll();
+        echo json_encode(['data' => $pemeriksaan]);
+    }
+
+    // public function getByPasienId($pasienId)
+    // {
+    //     $pemeriksaan = $this->pemeriksaanModel->getById(['"pasienId"' => $pasienId]);
+    //     echo json_encode(['data' => $pemeriksaan->findAll()]);
+    // }
+
+    public function add()
+    {
+        $data = array(
+            'pemeriksaanPasienId' => $this->request->getVar('pemeriksaanPasienId'),
+            'pemeriksaanPoliId' => $this->request->getVar('pemeriksaanPoliId'),
+            'pemeriksaanCreatedBy' => $this->request->getVar('pemeriksaanCreatedBy'),
+        );
+
+        if ($this->pemeriksaanModel->insert($data)) :
+            echo json_encode(['status' => true, 'msg' => 'Pemeriksaan Berhasil Ditambah']);
+        else :
+            echo json_encode(['status' => false, 'msg' => 'Pemeriksaan Gagal Ditambah']);
+        endif;
+    }
+
+    public function edit($id)
+    {
+        $url = $this->request->getServer('HTTP_REFERER');
+        $rules = [
+            'anamnese' => rv('required', ['required' => 'Anamnese Harus Diisi']),
+            'diagnosa' => rv('required', ['required' => 'Diagnosa Harus Diisi']),
+            'therapy' => rv('required', ['required' => 'Therapy Harus Diisi']),
+        ];
+        if (!$this->validate($rules)) {
+            return redirect()->to($url)->withInput();
+        };
+        $data = array(
+            'pemeriksaanAnamnese' => $this->request->getVar('anamnese'),
+            'pemeriksaanDiagnosa' => $this->request->getVar('diagnosa'),
+            'pemeriksaanTherapy' => $this->request->getVar('therapy'),
+            'pemeriksaanModifiedBy' => user()->email
+        );
+
+        if ($this->pemeriksaanModel->updateData(['pemeriksaanId' => $id], $data)) :
+            session()->setFlashdata('success', 'Pemeriksaan Berhasil Diupdate');
+        else :
+            session()->setFlashdata('error', 'Pemeriksaan Gagal Diupdate');
+        endif;
+        return redirect()->to($url);
+    }
+
+    public function delete($id)
+    {
+        $url = $this->request->getServer('HTTP_REFERER');
+        if ($this->pemeriksaanModel->deleteData(['uuid' => $id])) :
+            session()->setFlashdata('success', 'Pemeriksaan Berhasil Dihapus');
+        else :
+            session()->setFlashdata('error', 'Pemeriksaan Gagal Dihapus');
+        endif;
+        return redirect()->to($url);
+    }
+}

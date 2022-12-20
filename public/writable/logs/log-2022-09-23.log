@@ -1,0 +1,241 @@
+ERROR - 2022-09-23 11:31:41 --> ErrorException: pg_query(): Query failed: ERROR:  column dokter.dokterEmail does not exist
+LINE 7: WHERE &quot;dokter&quot;.&quot;dokterEmail&quot; = 'august.ivan20@gmail.com'
+              ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT COUNT(*)...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*)...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pemeriksaan/Controllers/Pemeriksaan.php(32): CodeIgniter\BaseModel->paginate(20, 'pemeriksaan')
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pemeriksaan\Controllers\Pemeriksaan->index()
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pemeriksaan\Controllers\Pemeriksaan))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-23 11:31:41 --> pg_query(): Query failed: ERROR:  column dokter.dokterEmail does not exist
+LINE 7: WHERE &quot;dokter&quot;.&quot;dokterEmail&quot; = 'august.ivan20@gmail.com'
+              ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column dokter.dokterEmail does not exist
+LINE 7: WHERE &quot;dokter&quot;.&quot;dokterEmail&quot; = \'august.ivan20@gmail.com\'
+              ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT COUNT(*) AS "numrows"
+FROM "pemeriksaan"
+LEFT JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+LEFT JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+LEFT JOIN "poli" ON poli."poliId" = penempatan."poliId"
+LEFT JOIN "dokter" ON dokter."dokterId" = penempatan."dokterId"
+WHERE "dokter"."dokterEmail" = \'august.ivan20@gmail.com\'
+AND "pemeriksaan"."pemeriksaanAnamnese" IS NULL
+AND "pemeriksaan"."pemeriksaanDiagnosa" IS NULL
+AND "pemeriksaan"."pemeriksaanTherapy" IS NULL
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT COUNT(*) AS "numrows"
+FROM "pemeriksaan"
+LEFT JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+LEFT JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+LEFT JOIN "poli" ON poli."poliId" = penempatan."poliId"
+LEFT JOIN "dokter" ON dokter."dokterId" = penempatan."dokterId"
+WHERE "dokter"."dokterEmail" = \'august.ivan20@gmail.com\'
+AND "pemeriksaan"."pemeriksaanAnamnese" IS NULL
+AND "pemeriksaan"."pemeriksaanDiagnosa" IS NULL
+AND "pemeriksaan"."pemeriksaanTherapy" IS NULL
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS "numrows"
+FROM "pemeriksaan"
+LEFT JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+LEFT JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+LEFT JOIN "poli" ON poli."poliId" = penempatan."poliId"
+LEFT JOIN "dokter" ON dokter."dokterId" = penempatan."dokterId"
+WHERE "dokter"."dokterEmail" = \'august.ivan20@gmail.com\'
+AND "pemeriksaan"."pemeriksaanAnamnese" IS NULL
+AND "pemeriksaan"."pemeriksaanDiagnosa" IS NULL
+AND "pemeriksaan"."pemeriksaanTherapy" IS NULL
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS "numrows"
+FROM "pemeriksaan"
+LEFT JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+LEFT JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+LEFT JOIN "poli" ON poli."poliId" = penempatan."poliId"
+LEFT JOIN "dokter" ON dokter."dokterId" = penempatan."dokterId"
+WHERE "dokter"."dokterEmail" = :dokter."dokterEmail":
+AND "pemeriksaan"."pemeriksaanAnamnese" IS NULL
+AND "pemeriksaan"."pemeriksaanDiagnosa" IS NULL
+AND "pemeriksaan"."pemeriksaanTherapy" IS NULL
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(551): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 7 SYSTEMPATH/BaseModel.php(1085): CodeIgniter\Model->countAllResults(false)
+ 8 ROOTPATH/modules/Pemeriksaan/Controllers/Pemeriksaan.php(32): CodeIgniter\BaseModel->paginate(20, 'pemeriksaan')
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pemeriksaan\Controllers\Pemeriksaan->index()
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pemeriksaan\Controllers\Pemeriksaan))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-23 11:58:05 --> Undefined property: stdClass::$pemeriksaanName
+in ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php on line 63.
+ 1 ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$pemeriksaanName', 'ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php', 63, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Pemeriksaan\\Views\\pemeriksaan', [], true)
+ 5 ROOTPATH/modules/Pemeriksaan/Controllers/Pemeriksaan.php(38): view('Modules\\Pemeriksaan\\Views\\pemeriksaan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Pemeriksaan\Controllers\Pemeriksaan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pemeriksaan\Controllers\Pemeriksaan))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-23 11:58:29 --> Undefined property: stdClass::$pemeriksaanName
+in ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php on line 130.
+ 1 ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php(130): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$pemeriksaanName', 'ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php', 130, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Pemeriksaan\\Views\\pemeriksaan', [], true)
+ 5 ROOTPATH/modules/Pemeriksaan/Controllers/Pemeriksaan.php(38): view('Modules\\Pemeriksaan\\Views\\pemeriksaan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Pemeriksaan\Controllers\Pemeriksaan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pemeriksaan\Controllers\Pemeriksaan))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-23 11:58:52 --> Undefined property: stdClass::$pemeriksaanName
+in ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php on line 124.
+ 1 ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php(124): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$pemeriksaanName', 'ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php', 124, [...])
+ 2 SYSTEMPATH/View/View.php(213): include('ROOTPATH/modules/Pemeriksaan/Views/pemeriksaan.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1142): CodeIgniter\View\View->render('Modules\\Pemeriksaan\\Views\\pemeriksaan', [], true)
+ 5 ROOTPATH/modules/Pemeriksaan/Controllers/Pemeriksaan.php(38): view('Modules\\Pemeriksaan\\Views\\pemeriksaan', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(907): Modules\Pemeriksaan\Controllers\Pemeriksaan->index()
+ 7 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pemeriksaan\Controllers\Pemeriksaan))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-23 14:39:59 --> ErrorException: pg_query(): Query failed: ERROR:  column pemeriksaan.pameriksaanPoliId does not exist
+LINE 4: ...R JOIN &quot;penempatan&quot; ON penempatan.&quot;penempatanId&quot; =pemeriksaa...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;pemeriksaan.pemeriksaanPoliId&quot;. in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #18, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pendaftaran/Controllers/Pendaftaran.php(38): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->index()
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-23 14:39:59 --> pg_query(): Query failed: ERROR:  column pemeriksaan.pameriksaanPoliId does not exist
+LINE 4: ...R JOIN &quot;penempatan&quot; ON penempatan.&quot;penempatanId&quot; =pemeriksaa...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;pemeriksaan.pemeriksaanPoliId&quot;.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pemeriksaan.pameriksaanPoliId does not exist
+LINE 4: ...R JOIN &quot;penempatan&quot; ON penempatan.&quot;penempatanId&quot; =pemeriksaa...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;pemeriksaan.pemeriksaanPoliId&quot;.', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pemeriksaan"
+INNER JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+INNER JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+INNER JOIN "poli" ON poli."poliId" = penempatan."poliId"
+WHERE "pasien"."nik" = \'1271180208910004\'
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pemeriksaan"
+INNER JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+INNER JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+INNER JOIN "poli" ON poli."poliId" = penempatan."poliId"
+WHERE "pasien"."nik" = \'1271180208910004\'
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pemeriksaan"
+INNER JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+INNER JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+INNER JOIN "poli" ON poli."poliId" = penempatan."poliId"
+WHERE "pasien"."nik" = \'1271180208910004\'
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pemeriksaan"
+INNER JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+INNER JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+INNER JOIN "poli" ON poli."poliId" = penempatan."poliId"
+WHERE "pasien"."nik" = :pasien.nik:
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php(38): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->index()
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-23 14:40:16 --> ErrorException: pg_query(): Query failed: ERROR:  column pemeriksaan.pameriksaanPoliId does not exist
+LINE 4: ...R JOIN &quot;penempatan&quot; ON penempatan.&quot;penempatanId&quot; =pemeriksaa...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;pemeriksaan.pemeriksaanPoliId&quot;. in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pendaftaran/Controllers/Pendaftaran.php(38): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->index()
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-23 14:40:16 --> pg_query(): Query failed: ERROR:  column pemeriksaan.pameriksaanPoliId does not exist
+LINE 4: ...R JOIN &quot;penempatan&quot; ON penempatan.&quot;penempatanId&quot; =pemeriksaa...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;pemeriksaan.pemeriksaanPoliId&quot;.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pemeriksaan.pameriksaanPoliId does not exist
+LINE 4: ...R JOIN &quot;penempatan&quot; ON penempatan.&quot;penempatanId&quot; =pemeriksaa...
+                                                             ^
+HINT:  Perhaps you meant to reference the column &quot;pemeriksaan.pemeriksaanPoliId&quot;.', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pemeriksaan"
+INNER JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+INNER JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+INNER JOIN "poli" ON poli."poliId" = penempatan."poliId"
+WHERE "pasien"."nik" = \'1271180208910004\'
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pemeriksaan"
+INNER JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+INNER JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+INNER JOIN "poli" ON poli."poliId" = penempatan."poliId"
+WHERE "pasien"."nik" = \'1271180208910004\'
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pemeriksaan"
+INNER JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+INNER JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+INNER JOIN "poli" ON poli."poliId" = penempatan."poliId"
+WHERE "pasien"."nik" = \'1271180208910004\'
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pemeriksaan"
+INNER JOIN "pasien" ON pasien."pasienId" =pemeriksaan."pemeriksaanPasienId"
+INNER JOIN "penempatan" ON penempatan."penempatanId" =pemeriksaan."pameriksaanPoliId"
+INNER JOIN "poli" ON poli."poliId" = penempatan."poliId"
+WHERE "pasien"."nik" = :pasien.nik:
+AND "pemeriksaan"."pemeriksaanDeletedDate" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php(38): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->index()
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')

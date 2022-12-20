@@ -1,0 +1,1348 @@
+CRITICAL - 2022-09-19 14:35:41 --> Too few arguments to function Modules\Pasien\Controllers\Pasien::getById(), 0 passed in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php on line 907 and exactly 1 expected
+in ROOTPATH/modules/Pasien/Controllers/Pasien.php on line 40.
+ 1 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:35:46 --> Too few arguments to function Modules\Pasien\Controllers\Pasien::getById(), 0 passed in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php on line 907 and exactly 1 expected
+in ROOTPATH/modules/Pasien/Controllers/Pasien.php on line 40.
+ 1 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:36:11 --> Too few arguments to function Modules\Pasien\Controllers\Pasien::getById(), 0 passed in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php on line 907 and exactly 1 expected
+in ROOTPATH/modules/Pasien/Controllers/Pasien.php on line 40.
+ 1 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById()
+ 2 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-19 14:36:44 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.pasienDeletedDate does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;pasienDeletedDate&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(43): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:36:44 --> pg_query(): Query failed: ERROR:  column pasien.pasienDeletedDate does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;pasienDeletedDate&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.pasienDeletedDate does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;pasienDeletedDate&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."pasienDeletedDate" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."pasienDeletedDate" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."pasienDeletedDate" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."pasienDeletedDate" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(43): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:36:44 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:37:18 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.pasienDeletedDate does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;pasienDeletedDate&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(43): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:37:18 --> pg_query(): Query failed: ERROR:  column pasien.pasienDeletedDate does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;pasienDeletedDate&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.pasienDeletedDate does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;pasienDeletedDate&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'127118020891000\'
+AND "pasien"."pasienDeletedDate" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'127118020891000\'
+AND "pasien"."pasienDeletedDate" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'127118020891000\'
+AND "pasien"."pasienDeletedDate" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."pasienDeletedDate" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(43): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:37:18 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:40:15 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:40:15 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:40:15 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:41:31 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:41:31 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:41:31 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:41:36 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:41:36 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:41:36 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:42:12 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:42:12 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:42:12 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:44:04 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:44:04 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:44:04 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:44:42 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:44:42 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:44:42 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:45:24 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:45:24 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:45:24 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:45:26 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:45:26 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:45:26 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:49:23 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:49:23 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:49:23 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:49:31 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:49:31 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:49:31 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:49:36 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:49:36 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:49:36 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:49:53 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:49:53 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:49:53 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:51:34 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:51:34 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:51:34 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:52:12 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('127118020891000...')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:52:12 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1271180208910006\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1271180208910006')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:52:12 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-09-19 14:54:00 --> ErrorException: pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'SELECT *\nFROM "...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *\nFROM "...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM "...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM "...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#7 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+#8 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1')
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#13 {main}
+CRITICAL - 2022-09-19 14:54:00 --> pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column pasien.deleted_at does not exist
+LINE 4: AND &quot;pasien&quot;.&quot;deleted_at&quot; IS NULL
+            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT *
+FROM "pasien"
+WHERE "nik" = \'1\'
+AND "pasien"."deleted_at" IS NULL')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1\'
+AND "pasien"."deleted_at" IS NULL')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM "pasien"
+WHERE "nik" = \'1\'
+AND "pasien"."deleted_at" IS NULL')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM "pasien"
+WHERE "nik" = :nik:
+AND "pasien"."deleted_at" IS NULL', [...], false)
+ 6 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 8 ROOTPATH/modules/Pasien/Controllers/Pasien.php(42): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->getById('1')
+10 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+11 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 14:54:00 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Type is not supported". in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php:41
+Stack trace:
+#0 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Format/JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Type is not sup...')
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(348): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/API/ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Debug/Exceptions.php(132): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH/Format/JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-09-19 15:03:35 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:03:40 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:08:55 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:09:08 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:09:13 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:09:18 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:10:03 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:10:14 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:11:34 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:11:56 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:12:49 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:24:49 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:24:54 --> Call to undefined method Modules\Pasien\Models\PasienModel::getPasien
+in SYSTEMPATH/Model.php on line 774.
+ 1 ROOTPATH/modules/Pasien/Controllers/Pasien.php(26): CodeIgniter\Model->__call('getPasien', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->index()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-19 15:49:09 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: INSERT INTO &quot;pasien&quot; (&quot;pasienName&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                            ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #19, 'INSERT INTO "pa...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pa...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pa...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pa...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Pasien/Controllers/Pasien.php(61): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->add()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-19 15:49:09 --> pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: INSERT INTO &quot;pasien&quot; (&quot;pasienName&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                            ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: INSERT INTO &quot;pasien&quot; (&quot;pasienName&quot;, &quot;created_at&quot;, &quot;updated_a...
+                                            ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "pasien" ("pasienName", "created_at", "updated_at") VALUES (\'Irvan\', \'2022-09-19 15:49:09\', \'2022-09-19 15:49:09\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pasien" ("pasienName", "created_at", "updated_at") VALUES (\'Irvan\', \'2022-09-19 15:49:09\', \'2022-09-19 15:49:09\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pasien" ("pasienName", "created_at", "updated_at") VALUES (\'Irvan\', \'2022-09-19 15:49:09\', \'2022-09-19 15:49:09\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pasien" ("pasienName", "created_at", "updated_at") VALUES (:pasienName:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Pasien/Controllers/Pasien.php(61): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Pasien\Controllers\Pasien->add()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pasien\Controllers\Pasien))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+CRITICAL - 2022-09-19 15:49:36 --> Undefined property: Modules\Pendaftaran\Controllers\Pendaftaran::$pasienModel
+in ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php on line 50.
+ 1 ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: Modules\\Pendaftaran\\Controllers\\Pendaftaran::$pasienModel', 'ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php', 50, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->pasienAdd()
+ 3 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-19 15:50:20 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: ...pasienAddress&quot;, &quot;pasienAccupation&quot;, &quot;pasienUnit&quot;, &quot;created_a...
+                                                             ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'INSERT INTO "pa...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pa...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pa...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pa...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Pendaftaran/Controllers/Pendaftaran.php(54): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->pasienAdd()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-19 15:50:20 --> pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: ...pasienAddress&quot;, &quot;pasienAccupation&quot;, &quot;pasienUnit&quot;, &quot;created_a...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: ...pasienAddress&quot;, &quot;pasienAccupation&quot;, &quot;pasienUnit&quot;, &quot;created_a...
+                                                             ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "created_at", "updated_at") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'2022-09-19 15:50:20\', \'2022-09-19 15:50:20\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "created_at", "updated_at") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'2022-09-19 15:50:20\', \'2022-09-19 15:50:20\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "created_at", "updated_at") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'2022-09-19 15:50:20\', \'2022-09-19 15:50:20\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "created_at", "updated_at") VALUES (:nik:, :pasienName:, :pasienAge:, :pasienSex:, :pasienAddress:, :pasienAccupation:, :pasienUnit:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php(54): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->pasienAdd()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-19 15:50:53 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: ...pasienAddress&quot;, &quot;pasienAccupation&quot;, &quot;pasienUnit&quot;, &quot;created_a...
+                                                             ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'INSERT INTO "pa...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pa...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pa...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pa...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Pendaftaran/Controllers/Pendaftaran.php(54): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->pasienAdd()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-19 15:50:53 --> pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: ...pasienAddress&quot;, &quot;pasienAccupation&quot;, &quot;pasienUnit&quot;, &quot;created_a...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;created_at&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: ...pasienAddress&quot;, &quot;pasienAccupation&quot;, &quot;pasienUnit&quot;, &quot;created_a...
+                                                             ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "created_at", "updated_at") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'2022-09-19 15:50:53\', \'2022-09-19 15:50:53\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "created_at", "updated_at") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'2022-09-19 15:50:53\', \'2022-09-19 15:50:53\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "created_at", "updated_at") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'2022-09-19 15:50:53\', \'2022-09-19 15:50:53\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "created_at", "updated_at") VALUES (:nik:, :pasienName:, :pasienAge:, :pasienSex:, :pasienAddress:, :pasienAccupation:, :pasienUnit:, :created_at:, :updated_at:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php(54): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->pasienAdd()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-19 15:53:32 --> ErrorException: pg_query(): Query failed: ERROR:  column &quot;pasienCreatedBy&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: ...pasienAddress&quot;, &quot;pasienAccupation&quot;, &quot;pasienUnit&quot;, &quot;pasienCre...
+                                                             ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #17, 'INSERT INTO "pa...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pa...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pa...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pa...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Pendaftaran/Controllers/Pendaftaran.php(55): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->pasienAdd()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-19 15:53:32 --> pg_query(): Query failed: ERROR:  column &quot;pasienCreatedBy&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: ...pasienAddress&quot;, &quot;pasienAccupation&quot;, &quot;pasienUnit&quot;, &quot;pasienCre...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  column &quot;pasienCreatedBy&quot; of relation &quot;pasien&quot; does not exist
+LINE 1: ...pasienAddress&quot;, &quot;pasienAccupation&quot;, &quot;pasienUnit&quot;, &quot;pasienCre...
+                                                             ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "pasienCreatedBy", "pasienCreatedDate", "pasienModifiedDate") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'august.ivan20@gmail.com\', \'2022-09-19 15:53:32\', \'2022-09-19 15:53:32\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "pasienCreatedBy", "pasienCreatedDate", "pasienModifiedDate") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'august.ivan20@gmail.com\', \'2022-09-19 15:53:32\', \'2022-09-19 15:53:32\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "pasienCreatedBy", "pasienCreatedDate", "pasienModifiedDate") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'august.ivan20@gmail.com\', \'2022-09-19 15:53:32\', \'2022-09-19 15:53:32\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "pasienCreatedBy", "pasienCreatedDate", "pasienModifiedDate") VALUES (:nik:, :pasienName:, :pasienAge:, :pasienSex:, :pasienAddress:, :pasienAccupation:, :pasienUnit:, :pasienCreatedBy:, :pasienCreatedDate:, :pasienModifiedDate:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php(55): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->pasienAdd()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
+ERROR - 2022-09-19 15:55:22 --> ErrorException: pg_query(): Query failed: ERROR:  &quot;P&quot; is not a valid binary digit
+LINE 1: ...Date&quot;) VALUES ('1271180208910006', 'Irvan', '31', 'P', 'jl.m...
+                                                             ^ in /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/Users/ivan/Cod...', 140, Array)
+#1 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #18, 'INSERT INTO "pa...')
+#2 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pa...')
+#3 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pa...')
+#4 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pa...', Array, false)
+#5 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#6 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#7 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#8 /Users/ivan/Codeigniter/klinik/modules/Pendaftaran/Controllers/Pendaftaran.php(55): CodeIgniter\Model->insert(Array)
+#9 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->pasienAdd()
+#10 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+#11 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /Users/ivan/Codeigniter/klinik/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /Users/ivan/Codeigniter/klinik/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(43): require_once('/Users/ivan/Cod...')
+#14 {main}
+CRITICAL - 2022-09-19 15:55:22 --> pg_query(): Query failed: ERROR:  &quot;P&quot; is not a valid binary digit
+LINE 1: ...Date&quot;) VALUES ('1271180208910006', 'Irvan', '31', 'P', 'jl.m...
+                                                             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  &quot;P&quot; is not a valid binary digit
+LINE 1: ...Date&quot;) VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.m...
+                                                             ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "pasienCreatedBy", "pasienCreatedDate", "pasienModifiedDate") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'august.ivan20@gmail.com\', \'2022-09-19 15:55:22\', \'2022-09-19 15:55:22\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "pasienCreatedBy", "pasienCreatedDate", "pasienModifiedDate") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'august.ivan20@gmail.com\', \'2022-09-19 15:55:22\', \'2022-09-19 15:55:22\')')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "pasienCreatedBy", "pasienCreatedDate", "pasienModifiedDate") VALUES (\'1271180208910006\', \'Irvan\', \'31\', \'P\', \'jl.mesjid taufik gg.bintara no 24\', \'Tendik\', \'IT\', \'august.ivan20@gmail.com\', \'2022-09-19 15:55:22\', \'2022-09-19 15:55:22\')')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pasien" ("nik", "pasienName", "pasienAge", "pasienSex", "pasienAddress", "pasienAccupation", "pasienUnit", "pasienCreatedBy", "pasienCreatedDate", "pasienModifiedDate") VALUES (:nik:, :pasienName:, :pasienAge:, :pasienSex:, :pasienAddress:, :pasienAccupation:, :pasienUnit:, :pasienCreatedBy:, :pasienCreatedDate:, :pasienModifiedDate:)', [...], false)
+ 6 SYSTEMPATH/Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH/BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH/Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 9 ROOTPATH/modules/Pendaftaran/Controllers/Pendaftaran.php(55): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH/CodeIgniter.php(907): Modules\Pendaftaran\Controllers\Pendaftaran->pasienAdd()
+11 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Pendaftaran\Controllers\Pendaftaran))
+12 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH/Commands/Server/rewrite.php(43): require_once('FCPATH/index.php')
