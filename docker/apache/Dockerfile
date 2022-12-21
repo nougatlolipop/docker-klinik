@@ -36,10 +36,10 @@ RUN a2enmod rewrite headers
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
 # 5. install composer
-RUN curl -sS https://getcomposer.org/installer | php
-RUN mv composer.phar /usr/local/bin/composer
-RUN chmod +x /usr/local/bin/composer
-RUN composer self-update
+#RUN curl -sS https://getcomposer.org/installer | php
+#RUN mv composer.phar /usr/local/bin/composer
+#RUN chmod +x /usr/local/bin/composer
+#RUN composer self-update
 
 # COPY src/ /var/www/html/
 # 6. butuh pengguna yang sama dengan UID/GID dengan host user
@@ -69,7 +69,7 @@ RUN chmod 777 ./ -R
 # VOLUME ./app:/var/www/html
 
 # # RUN permission
-RUN chmod 777 -R /var/www/html/writable
+#RUN chmod 777 -R /var/www/html/writable
 
 # # RUN environmenrt
 # RUN cp env .env

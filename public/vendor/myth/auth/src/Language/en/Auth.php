@@ -7,6 +7,7 @@ return [
     'appName' => 'Klinik Pratama',
 
     // Exceptions
+    'appName'             => 'Klinik Pratama',
     'invalidModel'        => 'The {0} model must be loaded prior to use.',
     'userNotFound'        => 'Unable to locate a user with ID = {0, number}.',
     'noUserEntity'        => 'User Entity must be provided for password validation.',
