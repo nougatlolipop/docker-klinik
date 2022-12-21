@@ -16,7 +16,7 @@ class Auth extends BaseConfig
      *
      * @var string
      */
-    public $defaultUserGroup;
+    public $defaultUserGroup = 'general';
 
     /**
      * --------------------------------------------------------------------
@@ -74,12 +74,12 @@ class Auth extends BaseConfig
      * @var array
      */
     public $views = [
-        'login'           => '\Modules\Login\Views\login',
-        'register'        => '\Modules\Login\Views\register',
-        'forgot'          => '\Modules\Login\Views\forgot',
-        'reset'           => '\Modules\Login\Views\reset',
-        'emailForgot'     => '\Modules\Login\Views\emails\forgot',
-        'emailActivation' => '\Modules\Login\Views\emails\activation',
+        'login'           => 'Modules\Login\Views\login',
+        'register'        => 'Modules\Login\Views\register',
+        'forgot'          => 'Modules\Login\Views\forgot',
+        'reset'           => 'Modules\Login\Views\reset',
+        'emailForgot'     => 'Modules\Login\Views\emails\forgot',
+        'emailActivation' => 'Modules\Login\Views\emails\activation',
     ];
 
     /**
@@ -89,7 +89,7 @@ class Auth extends BaseConfig
      *
      * @var string
      */
-    public $viewLayout = '\Modules\Login\Views\layout';
+    public $viewLayout = 'Modules\Login\Views\layout';
 
     /**
      * --------------------------------------------------------------------
@@ -213,7 +213,7 @@ class Auth extends BaseConfig
      *
      * @var bool
      */
-    public $allowRemembering = false;
+    public $allowRemembering = true;
 
     /**
      * --------------------------------------------------------------------

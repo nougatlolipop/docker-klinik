@@ -3,6 +3,9 @@
 namespace Myth\Auth\Language\en;
 
 return [
+
+    'appName' => 'Klinik Pratama',
+
     // Exceptions
     'invalidModel'        => 'The {0} model must be loaded prior to use.',
     'userNotFound'        => 'Unable to locate a user with ID = {0, number}.',
@@ -36,6 +39,7 @@ return [
     'forgotDisabled'  => 'Reseting password option has been disabled.',
     'forgotNoUser'    => 'Unable to locate a user with that email.',
     'forgotSubject'   => 'Password Reset Instructions',
+    'changeMind'   => 'Did you change your mind?',
     'resetSuccess'    => 'Your password has been successfully changed. Please login with the new password.',
     'forgotEmailSent' => 'A security token has been emailed to you. Enter it in the box below to continue.',
     'errorEmailSent'  => 'Unable to send email with password reset instructions to: {0}',
