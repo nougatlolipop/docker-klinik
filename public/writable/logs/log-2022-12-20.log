@@ -1,0 +1,95 @@
+ERROR - 2022-12-20 10:21:08 --> ErrorException: pg_query(): Query failed: ERROR:  relation &quot;ci_sessions&quot; does not exist
+LINE 2: FROM &quot;ci_sessions&quot;
+             ^ in /var/www/html/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:140
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', '/var/www/html/v...', 140, Array)
+#1 /var/www/html/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(140): pg_query(Resource id #206, 'SELECT encode(d...')
+#2 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT encode(d...')
+#3 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT encode(d...')
+#4 /var/www/html/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT encode(d...', Array, false)
+#5 /var/www/html/vendor/codeigniter4/framework/system/Session/Handlers/DatabaseHandler.php(126): CodeIgniter\Database\BaseBuilder->get()
+#6 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('bn68babqvkhgomn...')
+#7 /var/www/html/vendor/codeigniter4/framework/system/Session/Session.php(920): session_start()
+#8 /var/www/html/vendor/codeigniter4/framework/system/Session/Session.php(242): CodeIgniter\Session\Session->startSession()
+#9 /var/www/html/vendor/codeigniter4/framework/system/Config/Services.php(665): CodeIgniter\Session\Session->start()
+#10 /var/www/html/vendor/codeigniter4/framework/system/Config/BaseService.php(253): CodeIgniter\Config\Services::session(Object(Config\App), false)
+#11 /var/www/html/vendor/codeigniter4/framework/system/Config/BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#12 /var/www/html/vendor/codeigniter4/framework/system/Config/Services.php(637): CodeIgniter\Config\BaseService::getSharedInstance('session', NULL)
+#13 /var/www/html/vendor/codeigniter4/framework/system/Config/BaseService.php(253): CodeIgniter\Config\Services::session()
+#14 /var/www/html/vendor/codeigniter4/framework/system/Common.php(967): CodeIgniter\Config\BaseService::__callStatic('session', Array)
+#15 /var/www/html/vendor/myth/auth/src/Controllers/AuthController.php(29): service('session')
+#16 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(869): Myth\Auth\Controllers\AuthController->__construct()
+#17 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+#18 /var/www/html/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#19 /var/www/html/index.php(67): CodeIgniter\CodeIgniter->run()
+#20 {main}
+CRITICAL - 2022-12-20 10:21:08 --> pg_query(): Query failed: ERROR:  relation &quot;ci_sessions&quot; does not exist
+LINE 2: FROM &quot;ci_sessions&quot;
+             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  relation &quot;ci_sessions&quot; does not exist
+LINE 2: FROM &quot;ci_sessions&quot;
+             ^', 'SYSTEMPATH/Database/Postgre/Connection.php', 140, [...])
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(140): pg_query(resource (pgsql link), 'SELECT encode(data, \'base64\') AS data
+FROM "ci_sessions"
+WHERE "id" = \'bn68babqvkhgomnb7lr5p9o5jkoathk5\'
+AND "ip_address" = \'192.168.201.184\'')
+ 3 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('SELECT encode(data, \'base64\') AS data
+FROM "ci_sessions"
+WHERE "id" = \'bn68babqvkhgomnb7lr5p9o5jkoathk5\'
+AND "ip_address" = \'192.168.201.184\'')
+ 4 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT encode(data, \'base64\') AS data
+FROM "ci_sessions"
+WHERE "id" = \'bn68babqvkhgomnb7lr5p9o5jkoathk5\'
+AND "ip_address" = \'192.168.201.184\'')
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT encode(data, \'base64\') AS data
+FROM "ci_sessions"
+WHERE "id" = :id:
+AND "ip_address" = :ip_address:', [...], false)
+ 6 SYSTEMPATH/Session/Handlers/DatabaseHandler.php(126): CodeIgniter\Database\BaseBuilder->get()
+ 7 [internal function]: CodeIgniter\Session\Handlers\DatabaseHandler->read('bn68babqvkhgomnb7lr5p9o5jkoathk5')
+ 8 SYSTEMPATH/Session/Session.php(920): session_start()
+ 9 SYSTEMPATH/Session/Session.php(242): CodeIgniter\Session\Session->startSession()
+10 SYSTEMPATH/Config/Services.php(665): CodeIgniter\Session\Session->start()
+11 SYSTEMPATH/Config/BaseService.php(253): CodeIgniter\Config\Services::session(Object(Config\App), false)
+12 SYSTEMPATH/Config/BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+13 SYSTEMPATH/Config/Services.php(637): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+14 SYSTEMPATH/Config/BaseService.php(253): CodeIgniter\Config\Services::session()
+15 SYSTEMPATH/Common.php(967): CodeIgniter\Config\BaseService::__callStatic('session', [])
+16 FCPATH/vendor/myth/auth/src/Controllers/AuthController.php(29): service('session')
+17 SYSTEMPATH/CodeIgniter.php(869): Myth\Auth\Controllers\AuthController->__construct()
+18 SYSTEMPATH/CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+19 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+20 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 10:53:09 --> Undefined offset: 0
+in APPPATH/Controllers/BaseController.php on line 60.
+ 1 APPPATH/Controllers/BaseController.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH/Controllers/BaseController.php', 60, [])
+ 2 ROOTPATH/modules/Dashboard/Controllers/Dashboard.php(16): App\Controllers\BaseController->fetchMenu()
+ 3 SYSTEMPATH/CodeIgniter.php(907): Modules\Dashboard\Controllers\Dashboard->index()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dashboard\Controllers\Dashboard))
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 10:53:24 --> Undefined offset: 0
+in APPPATH/Controllers/BaseController.php on line 60.
+ 1 APPPATH/Controllers/BaseController.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH/Controllers/BaseController.php', 60, [])
+ 2 ROOTPATH/modules/Dashboard/Controllers/Dashboard.php(16): App\Controllers\BaseController->fetchMenu()
+ 3 SYSTEMPATH/CodeIgniter.php(907): Modules\Dashboard\Controllers\Dashboard->index()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dashboard\Controllers\Dashboard))
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 11:10:57 --> Undefined offset: 0
+in APPPATH/Controllers/BaseController.php on line 60.
+ 1 APPPATH/Controllers/BaseController.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH/Controllers/BaseController.php', 60, [])
+ 2 ROOTPATH/modules/Dashboard/Controllers/Dashboard.php(16): App\Controllers\BaseController->fetchMenu()
+ 3 SYSTEMPATH/CodeIgniter.php(907): Modules\Dashboard\Controllers\Dashboard->index()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dashboard\Controllers\Dashboard))
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-12-20 11:18:41 --> Undefined offset: 0
+in APPPATH/Controllers/BaseController.php on line 60.
+ 1 APPPATH/Controllers/BaseController.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH/Controllers/BaseController.php', 60, [])
+ 2 ROOTPATH/modules/Dashboard/Controllers/Dashboard.php(16): App\Controllers\BaseController->fetchMenu()
+ 3 SYSTEMPATH/CodeIgniter.php(907): Modules\Dashboard\Controllers\Dashboard->index()
+ 4 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(Modules\Dashboard\Controllers\Dashboard))
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
