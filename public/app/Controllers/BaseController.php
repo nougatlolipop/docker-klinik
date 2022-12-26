@@ -142,5 +142,5 @@ abstract class BaseController extends Controller
         return $file;
     }
 
-    protected $numberPage = 20;
+    protected $numberPage = 10;
 }

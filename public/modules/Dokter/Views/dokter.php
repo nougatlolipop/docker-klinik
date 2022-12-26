@@ -39,11 +39,20 @@
                             <?php if (!empty(session()->getFlashdata('success'))) : ?>
                                 <?= view('layout/templateAlertIcon', ['msg' => ['success', 'fas fa-check', 'Sukses!', session()->getFlashdata('success')]]); ?>
                             <?php endif; ?>
+                            <?php if ($validation->hasError('dokterSip')) : ?>
+                                <?= view('layout/templateAlertIcon', ['msg' => ['danger', 'fas fa-exclamation', 'Gagal!', $validation->getError('dokterSip')]]); ?>
+                            <?php endif; ?>
                             <?php if ($validation->hasError('dokterName')) : ?>
                                 <?= view('layout/templateAlertIcon', ['msg' => ['danger', 'fas fa-exclamation', 'Gagal!', $validation->getError('dokterName')]]); ?>
                             <?php endif; ?>
+                            <?php if ($validation->hasError('dokterNoHp')) : ?>
+                                <?= view('layout/templateAlertIcon', ['msg' => ['danger', 'fas fa-exclamation', 'Gagal!', $validation->getError('dokterNoHp')]]); ?>
+                            <?php endif; ?>
                             <?php if ($validation->hasError('dokterEmail')) : ?>
                                 <?= view('layout/templateAlertIcon', ['msg' => ['danger', 'fas fa-exclamation', 'Gagal!', $validation->getError('dokterEmail')]]); ?>
+                            <?php endif; ?>
+                            <?php if ($validation->hasError('dokterAlamat')) : ?>
+                                <?= view('layout/templateAlertIcon', ['msg' => ['danger', 'fas fa-exclamation', 'Gagal!', $validation->getError('dokterAlamat')]]); ?>
                             <?php endif; ?>
                             <?php if ($validation->hasError('username')) : ?>
                                 <?= view('layout/templateAlertIcon', ['msg' => ['danger', 'fas fa-exclamation', 'Gagal!', $validation->getError('username')]]); ?>
@@ -59,8 +68,11 @@
                                     <thead>
                                         <tr>
                                             <th style="text-align:center" scope="col" width="5%">No.</th>
-                                            <th scope="col">Nama Dokter</th>
-                                            <th scope="col">Email Dokter</th>
+                                            <th scope="col">SIP</th>
+                                            <th scope="col">Nama</th>
+                                            <th scope="col">No. Handphone</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Alamat</th>
                                             <th width="20%" style="text-align:center" scope="col">Action</th>
                                         </tr>
                                     </thead>
@@ -71,8 +83,11 @@
                                             foreach ($dokter as $pl) : ?>
                                                 <tr>
                                                     <td style="text-align:center" scope="row"><?= $no++; ?></td>
+                                                    <td><?= $pl->dokterSip; ?></td>
                                                     <td><?= $pl->dokterName; ?></td>
+                                                    <td><?= $pl->dokterNoHp; ?></td>
                                                     <td><?= $pl->dokterEmail; ?></td>
+                                                    <td><?= $pl->dokterAlamat; ?></td>
                                                     <td style="text-align:center">
                                                         <button class="btn btn-icon icon-left btn-info" data-toggle="modal" data-target="#edit<?= $pl->uuid; ?>"><i class="fas fa-edit"></i></button>
                                                         <button class="btn btn-icon icon-left btn-danger" data-toggle="modal" data-target="#delete<?= $pl->uuid; ?>"><i class="fas fa-trash"></i></button>
@@ -80,7 +95,7 @@
                                                 </tr>
                                             <?php endforeach ?>
                                         <?php else : ?>
-                                            <?= view('layout/templateEmpty', ['jumlahSpan' => 3]); ?>
+                                            <?= view('layout/templateEmpty', ['jumlahSpan' => 7]); ?>
                                         <?php endif ?>
                                     </tbody>
                                 </table>
@@ -108,13 +123,25 @@
                 <?= csrf_field(); ?>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Nama Dokter</label>
+                        <label>SIP</label>
+                        <input name="dokterSip" type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Nama</label>
                         <input name="dokterName" type="text" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Email Dokter</label>
+                        <label>No. Handphone</label>
+                        <input name="dokterNoHp" type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
                         <p class="text-warning"><small>Pastikan email yang digunakan aktif</small></p>
                         <input name="dokterEmail" type="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Alamat</label>
+                        <input name="dokterAlamat" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Username</label>
@@ -153,12 +180,24 @@
                     <input type="hidden" name="_method" value="PUT">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Nama Dokter</label>
+                            <label>SIP</label>
+                            <input name="dokterSip" type="number" class="form-control" value="<?= $edit->dokterSip ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Nama</label>
                             <input name="dokterName" type="text" class="form-control" value="<?= $edit->dokterName ?>">
                         </div>
                         <div class="form-group">
-                            <label>Email Dokter</label>
+                            <label>No. Handphone</label>
+                            <input name="dokterNoHp" type="number" class="form-control" value="<?= $edit->dokterNoHp ?>">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
                             <input name="dokterEmail" type="email" class="form-control" value="<?= $edit->dokterEmail ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Alamat</label>
+                            <input name="dokterAlamat" type="text" class="form-control" value="<?= $edit->dokterAlamat ?>">
                         </div>
                     </div>
                     <div class="modal-footer bg-whitesmoke br">

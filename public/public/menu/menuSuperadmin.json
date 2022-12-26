@@ -72,11 +72,11 @@
     },
     {
         "id": "10",
-        "nama": "Pendaftaran Pasien",
+        "nama": "Pasien",
         "parent": "9",
         "level": "child",
         "status": true,
-        "icon": "fas fa-edit",
+        "icon": "fas fa-user-injured",
         "pages": "/pendaftaran"
     },
     {

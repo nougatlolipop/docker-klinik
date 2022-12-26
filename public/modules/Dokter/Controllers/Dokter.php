@@ -45,10 +45,17 @@ class Dokter extends BaseController
 
     public function add()
     {
+        // dd($_POST);
         $url = $this->request->getServer('HTTP_REFERER');
         $rules = [
+            'dokterSip' => rv('required', ['required' => 'SIP Dokter Harus Diisi']),
             'dokterName' => rv('required', ['required' => 'Nama Dokter Harus Diisi']),
-            'dokterEmail' => rv('required', ['required' => 'Email Dokter Harus Diisi']),
+            'dokterNoHp' => rv('required', ['required' => 'No. Handphone Dokter Harus Diisi']),
+            'dokterEmail' => rv('required|is_unique[users.email]', [
+                'required' => 'Email Dokter Harus Diisi',
+                'is_unique' => 'Email Sudah Digunakan'
+            ]),
+            'dokterAlamat' => rv('required', ['required' => 'Alamat Dokter Harus Diisi']),
             'username' => rv('required|min_length[3]|max_length[30]|is_unique[users.username]', [
                 'required' => 'Username Harus Diisi',
                 'min_length' => 'Username Kurang Dari 3 Karakter',
@@ -81,8 +88,11 @@ class Dokter extends BaseController
 
         $data = array(
             'uuid' => uuid(),
+            'dokterSip' => $this->request->getVar('dokterSip'),
             'dokterName' => $this->request->getVar('dokterName'),
+            'dokterNoHp' => $this->request->getVar('dokterNoHp'),
             'dokterEmail' => $this->request->getVar('dokterEmail'),
+            'dokterAlamat' => $this->request->getVar('dokterAlamat'),
             'dokterCretatedBy' => user()->email
         );
 
@@ -98,14 +108,19 @@ class Dokter extends BaseController
     {
         $url = $this->request->getServer('HTTP_REFERER');
         $rules = [
+            'dokterSip' => rv('required', ['required' => 'SIP Dokter Harus Diisi']),
             'dokterName' => rv('required', ['required' => 'Nama Dokter Harus Diisi']),
+            'dokterNoHp' => rv('required', ['required' => 'No. Handphone Dokter Harus Diisi']),
+            'dokterAlamat' => rv('required', ['required' => 'Alamat Dokter Harus Diisi']),
         ];
         if (!$this->validate($rules)) {
             return redirect()->to($url)->withInput();
         };
         $data = array(
+            'dokterSip' => $this->request->getVar('dokterSip'),
             'dokterName' => $this->request->getVar('dokterName'),
-            'dokterEmail' => $this->request->getVar('dokterEmail'),
+            'dokterNoHp' => $this->request->getVar('dokterNoHp'),
+            'dokterAlamat' => $this->request->getVar('dokterAlamat'),
             'dokterModifiedBy' => user()->email
         );
 

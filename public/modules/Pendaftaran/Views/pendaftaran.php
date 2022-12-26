@@ -25,7 +25,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <div class="input-group mb-3">
-                                                    <input name="nik" type="text" value="<?= isset($_GET['n']) ? $_GET['n'] : '' ?>" class="form-control" placeholder="NIK">
+                                                    <input name="nik" type="text" value="<?= isset($_GET['n']) ? $_GET['n'] : '' ?>" class="form-control" placeholder="No. Identitas (NIK/No. BPJS/NPM)">
                                                     <div class="input-group-append">
                                                         <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#cari"><i class="fas fa-search"></i></button>
                                                     </div>
@@ -83,7 +83,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <div class="row btnLanjut">
                                 <div class="col-md-12">
@@ -93,37 +92,34 @@
                                 </div>
                             </div>
                             <hr />
-                            <h4 class="title">Rekam Medis</h4>
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th style="text-align:center" scope="col" width="5%">No.</th>
-                                            <th scope="col">Diagnosa</th>
-                                            <th scope="col">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="data-rekam-medis">
-                                        <?php if (count($rekamMedis) > 0) : ?>
-                                            <?php $no = 1;
-                                            foreach ($rekamMedis as $keyRm => $rm) : ?>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <h4 class="title">Rekam Medis</h4>
+                                </div>
+                                <div class="col-md-6 btnExport">
+                                    <div class="form-group">
+                                        <button class="btn btn-danger float-right" data-toggle="modal" data-target="#rekamMedis"><i class="fas fa-folder-plus"></i> Rekam Medis</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-bordered">
+                                            <thead>
                                                 <tr>
-                                                    <td><?= $no++ ?></td>
-                                                    <td>
-                                                        <?php if ($rm->pemeriksaanDiagnosa === null) : ?>
-                                                            <div class="badge badge-warning">Butuh tindakan</div>
-                                                        <?php else : ?>
-                                                            <?= $rm->pemeriksaanDiagnosa ?>
-                                                        <?php endif ?>
-                                                    </td>
-                                                    <td>Read More</td>
+                                                    <th style="text-align:center" scope="col" width="5%">No.</th>
+                                                    <th scope="col" width="13%">Tanggal/Waktu</th>
+                                                    <th scope="col">Diagnosa</th>
+                                                    <th style="text-align:center" scope="col" width="15%">Action</th>
                                                 </tr>
-                                            <?php endforeach ?>
-                                        <?php else : ?>
-                                            <?= view('layout/templateEmpty', ['jumlahSpan' => 3]); ?>
-                                        <?php endif ?>
-                                    </tbody>
-                                </table>
+                                            </thead>
+                                            <tbody class="data-rekam-medis">
+                                                <?= view('layout/templateEmpty', ['jumlahSpan' => 4]); ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -138,7 +134,7 @@
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Tambah Data <?= $title ?></h5>
+                <h5 class="modal-title">Tambah Data Pemeriksaan</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -149,20 +145,22 @@
                         <thead>
                             <tr>
                                 <th style=" text-align:center" scope="col" width="5%">Pilih</th>
-                                <th scope="col">Nik</th>
+                                <th scope="col">No. Identitas (NIK/No. BPJS/NPM)</th>
                                 <th scope="col">Nama Pasien</th>
                                 <th scope="col">Umur</th>
                                 <th scope="col">Jenis Kelamin</th>
+                                <th scope="col">Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($pasien as $p => $psn) : ?>
                                 <tr>
-                                    <td><input type="radio" name="pasien" id="pasien" value="<?= $psn->nik ?>"></td>
+                                    <td style=" text-align:center" width="5%"><input type="radio" name="pasien" id="pasien" value="<?= $psn->nik ?>"></td>
                                     <td><?= $psn->nik ?></td>
                                     <td><?= $psn->pasienName ?></td>
                                     <td><?= $psn->pasienAge ?></td>
                                     <td><?= $psn->pasienSex ?></td>
+                                    <td><?= strtoupper($psn->pasienStatus) ?></td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>
@@ -191,7 +189,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <select class="form-control select2" name="poliId">
-                        <option value="">Pilih Poli</option>
+                        <option value="">Pilih Dokter</option>
                         <?php foreach ($penempatan as $key => $pnmptn) : ?>
                             <option value="<?= $pnmptn->penempatanId ?>"><?= $pnmptn->dokterName ?> (<?= $pnmptn->poliName ?>)</option>
                         <?php endforeach ?>
@@ -206,6 +204,76 @@
     </div>
 </div>
 <!-- end modal cari -->
+
+<!-- start modal more  -->
+<div class="modal fade" role="dialog" id="more">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detail Pemeriksaan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="data-pemeriksaan">
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal more -->
+
+<!-- start modal rekam medis  -->
+<div class="modal fade" role="dialog" id="rekamMedis">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Export Rekam Medis</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Silahkan klik tombol <strong>Export</strong> untuk mengexport rekam medis pasien ini
+            </div>
+            <form action="/pemeriksaan/rekamMedis" method="post">
+                <input type="hidden" name="identitas" value="<?= isset($_GET['n']) ? $_GET['n'] : '' ?>">
+                <div class="modal-footer bg-whitesmoke br">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Export</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end modal rekam medis -->
+
+<!-- start modal resep  -->
+<div class="modal fade" role="dialog" id="resep">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Export Resep</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Silahkan klik tombol <strong>Export</strong> untuk mengexport resep pasien ini
+            </div>
+            <form action="/pemeriksaan/resep" method="post">
+                <input type="hidden" name="pemeriksaanId" value="">
+                <div class="modal-footer bg-whitesmoke br">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Export</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end modal resep -->
 
 <?= view('layout/templateFooter'); ?>
 

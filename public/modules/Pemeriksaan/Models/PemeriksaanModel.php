@@ -26,7 +26,9 @@ class PemeriksaanModel extends Model
         if ($keyword) {
             $builder->like(['LOWER(pasien."pasienName")' => strtolower($keyword)]);
         }
-        $builder->where(['dokter."dokterEmail"' => $email, $this->table . '."pemeriksaanAnamnese"' => NULL, $this->table . '."pemeriksaanDiagnosa"' => NULL, $this->table . '."pemeriksaanTherapy"' => NULL]);
+        if (in_groups('dokter')) {
+            $builder->where(['dokter."dokterEmail"' => $email]);
+        }
         $builder->orderBy($this->table . '."pemeriksaanCreatedDate"', 'ASC');
         return $builder;
     }
@@ -37,9 +39,20 @@ class PemeriksaanModel extends Model
         $builder->join('pasien', 'pasien."pasienId" =' . $this->table . '."pemeriksaanPasienId"', 'INNER');
         $builder->join('penempatan', 'penempatan."penempatanId" =' . $this->table . '."pemeriksaanPoliId"', 'INNER');
         $builder->join('poli', 'poli."poliId" = penempatan."poliId"', 'INNER');
+        $builder->join('dokter', 'dokter."dokterId" = penempatan."dokterId"', 'INNER');
         $builder->where($where);
+        $builder->orderBy($this->table . '."pemeriksaanCreatedDate"', 'ASC');
         return $builder;
     }
+
+    // public function getDetail($where)
+    // {
+    //     $builder = $this->table($this->table);
+    //     $builder->join('penempatan', 'penempatan."penempatanId" =' . $this->table . '."pemeriksaanPoliId"', 'INNER');
+    //     $builder->join('dokter', 'dokter."dokterId" = penempatan."dokterId"', 'INNER');
+    //     $builder->where($where);
+    //     return $builder;
+    // }
 
     public function updateData($where, $data)
     {

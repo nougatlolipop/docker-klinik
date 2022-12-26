@@ -24,18 +24,18 @@ class PasienModel extends Model
         return $builder->get();
     }
 
-    public function updateData($where, $data)
-    {
-        $builder = $this->table($this->table);
-        return $builder->set($data)
-            ->where($where)
-            ->update();
-    }
+    // public function updateData($where, $data)
+    // {
+    //     $builder = $this->table($this->table);
+    //     return $builder->set($data)
+    //         ->where($where)
+    //         ->update();
+    // }
 
-    public function deleteData($where)
-    {
-        $builder = $this->table($this->table);
-        return $builder->where($where)
-            ->delete();
-    }
+    // public function deleteData($where)
+    // {
+    //     $builder = $this->table($this->table);
+    //     return $builder->where($where)
+    //         ->delete();
+    // }
 }

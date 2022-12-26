@@ -73,7 +73,7 @@
 
 
 <body>
-
+  <input type="hidden" name="emailUser" value="<?= user()->email ?>">
   <div id="app">
     <div class="main-wrapper">
 

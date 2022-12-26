@@ -29,15 +29,14 @@ class Pendaftaran extends BaseController
 
     public function index()
     {
-        $nik = $this->request->getVar('n') ? $this->request->getVar('n') : '';
         $data = [
             'menu' => $this->fetchMenu(),
-            'title' => "Pendaftaran",
-            'breadcrumb' => ['Administrasi', 'Pendaftaran'],
+            'title' => "Pasien",
+            'breadcrumb' => ['Administrasi', 'Pasien'],
             'pasien' => $this->pasienModel->findAll(),
-            'rekamMedis' => $this->pemeriksaanModel->getById(['pasien.nik' => $nik])->findAll(),
             'penempatan' => $this->penempatanModel->getPenempatan()->findall()
         ];
+        // dd($data['rekamMedis']);
         return view('Modules\Pendaftaran\Views\pendaftaran', $data);
     }
 

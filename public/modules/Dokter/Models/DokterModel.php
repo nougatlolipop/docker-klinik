@@ -8,7 +8,7 @@ class DokterModel extends Model
 {
     protected $table = 'dokter';
     protected $primaryKey = 'dokterId';
-    protected $allowedFields = ['uuid', 'dokterName', 'dokterEmail', 'dokterCretatedBy', 'dokterCreatedDate', 'dokterModifiedBy', 'dokterModifiedDate', 'dokterDeletedDate'];
+    protected $allowedFields = ['uuid', 'dokterSip', 'dokterName', 'dokterNoHp', 'dokterEmail', 'dokterAlamat', 'dokterCretatedBy', 'dokterCreatedDate', 'dokterModifiedBy', 'dokterModifiedDate', 'dokterDeletedDate'];
     protected $useTimestamps = 'false';
     protected $useSoftDeletes = 'true';
     protected $createdField = 'dokterCreatedDate';

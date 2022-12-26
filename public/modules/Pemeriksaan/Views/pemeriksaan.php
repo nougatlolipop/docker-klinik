@@ -55,6 +55,7 @@
                                     <thead>
                                         <tr>
                                             <th style="text-align:center" scope="col" width="5%">No.</th>
+                                            <th scope="col">Tanggal/Waktu</th>
                                             <th scope="col">Nama Pasien</th>
                                             <th scope="col">Umur Pasien</th>
                                             <th scope="col">Alamat Pasien</th>
@@ -69,16 +70,15 @@
                                             foreach ($pemeriksaan as $pl) : ?>
                                                 <tr>
                                                     <td style="text-align:center" scope="row"><?= $no++; ?></td>
+                                                    <td><?= $pl->pemeriksaanCreatedDate; ?></td>
                                                     <td><?= $pl->pasienName; ?></td>
                                                     <td><?= $pl->pasienAge; ?></td>
                                                     <td><?= $pl->pasienAddress; ?></td>
                                                     <td>
-                                                        <?php if ($pl->pemeriksaanDiagnosa === null) : ?>
-                                                            <div class="badge badge-warning">Butuh tindakan</div>
-                                                        <?php endif ?>
+                                                        <div class="badge badge-<?= ($pl->pemeriksaanDiagnosa === null) ? 'warning' : 'success'; ?>"><?= ($pl->pemeriksaanDiagnosa === null) ? 'Butuh tindakan' : 'Tertangani'; ?></div>
                                                     </td>
                                                     <td style="text-align:center">
-                                                        <button class="btn btn-icon icon-left btn-primary" data-toggle="modal" data-target="#tindakan<?= $pl->pemeriksaanId; ?>"><i class="fas fa-stethoscope"></i> Tindakan</button>
+                                                        <button class="btn btn-icon icon-left btn-primary" data-toggle="modal" data-target="#tindakan<?= $pl->pemeriksaanId; ?>" <?= in_groups('dokter') ? '' : 'disabled' ?>><i class="fas fa-stethoscope"></i> Tindakan</button>
                                                     </td>
                                                 </tr>
                                             <?php endforeach ?>
@@ -113,15 +113,15 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Anamnese</label>
-                            <textarea name="anamnese" class="summernote"></textarea>
+                            <textarea name="anamnese" class="summernote"><?= $tindakan->pemeriksaanAnamnese ?></textarea>
                         </div>
                         <div class="form-group">
                             <label>Diagnosa</label>
-                            <textarea name="diagnosa" class="summernote"></textarea>
+                            <textarea name="diagnosa" class="summernote"><?= $tindakan->pemeriksaanDiagnosa ?></textarea>
                         </div>
                         <div class="form-group">
                             <label>Therapy</label>
-                            <textarea name="therapy" class="summernote"></textarea>
+                            <textarea name="therapy" class="summernote"><?= $tindakan->pemeriksaanTherapy ?></textarea>
                         </div>
                     </div>
                     <div class="modal-footer bg-whitesmoke br">

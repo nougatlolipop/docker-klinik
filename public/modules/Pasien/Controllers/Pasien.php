@@ -45,13 +45,13 @@ class Pasien extends BaseController
 
     public function add()
     {
-        $url = $this->request->getServer('HTTP_REFERER');
-        $rules = [
-            'pasienName' => rv('required', ['required' => 'Nama Pasien Harus Diisi']),
-        ];
-        if (!$this->validate($rules)) {
-            return redirect()->to($url)->withInput();
-        };
+        // $url = $this->request->getServer('HTTP_REFERER');
+        // $rules = [
+        //     'pasienName' => rv('required', ['required' => 'Nama Pasien Harus Diisi']),
+        // ];
+        // if (!$this->validate($rules)) {
+        //     return redirect()->to($url)->withInput();
+        // };
         $data = array(
             'uuid' => uuid(),
             'nik' => $this->request->getVar('nik'),
@@ -62,7 +62,7 @@ class Pasien extends BaseController
             'pasienUnit' => $this->request->getVar('unit'),
             'pasienSex' => $this->request->getVar('jk'),
             'pasienStatus' => $this->request->getVar('status'),
-            'pasienCretaedBy' => user()->email
+            'pasienCretaedBy' => $this->request->getVar('email')
         );
 
         if ($this->pasienModel->insert($data)) :
@@ -72,36 +72,36 @@ class Pasien extends BaseController
         endif;
     }
 
-    public function edit($id)
-    {
-        $url = $this->request->getServer('HTTP_REFERER');
-        $rules = [
-            'pasienName' => rv('required', ['required' => 'Nama Pasien Harus Diisi']),
-        ];
-        if (!$this->validate($rules)) {
-            return redirect()->to($url)->withInput();
-        };
-        $data = array(
-            'pasienName' => $this->request->getVar('pasienName'),
-            'pasienModifiedBy' => user()->email
-        );
+    // public function edit($id)
+    // {
+    //     $url = $this->request->getServer('HTTP_REFERER');
+    //     $rules = [
+    //         'pasienName' => rv('required', ['required' => 'Nama Pasien Harus Diisi']),
+    //     ];
+    //     if (!$this->validate($rules)) {
+    //         return redirect()->to($url)->withInput();
+    //     };
+    //     $data = array(
+    //         'pasienName' => $this->request->getVar('pasienName'),
+    //         'pasienModifiedBy' => user()->email
+    //     );
 
-        if ($this->pasienModel->updateData(['uuid' => $id], $data)) :
-            session()->setFlashdata('success', 'Pasien Berhasil Diupdate');
-        else :
-            session()->setFlashdata('error', 'Pasien Gagal Diupdate');
-        endif;
-        return redirect()->to($url);
-    }
+    //     if ($this->pasienModel->updateData(['uuid' => $id], $data)) :
+    //         session()->setFlashdata('success', 'Pasien Berhasil Diupdate');
+    //     else :
+    //         session()->setFlashdata('error', 'Pasien Gagal Diupdate');
+    //     endif;
+    //     return redirect()->to($url);
+    // }
 
-    public function delete($id)
-    {
-        $url = $this->request->getServer('HTTP_REFERER');
-        if ($this->pasienModel->deleteData(['uuid' => $id])) :
-            session()->setFlashdata('success', 'Pasien Berhasil Dihapus');
-        else :
-            session()->setFlashdata('error', 'Pasien Gagal Dihapus');
-        endif;
-        return redirect()->to($url);
-    }
+    // public function delete($id)
+    // {
+    //     $url = $this->request->getServer('HTTP_REFERER');
+    //     if ($this->pasienModel->deleteData(['uuid' => $id])) :
+    //         session()->setFlashdata('success', 'Pasien Berhasil Dihapus');
+    //     else :
+    //         session()->setFlashdata('error', 'Pasien Gagal Dihapus');
+    //     endif;
+    //     return redirect()->to($url);
+    // }
 }
