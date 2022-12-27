@@ -84,13 +84,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row btnLanjut">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <button class="btn btn-primary float-right lanjut" data-toggle="modal" data-target="#anamnese">Lanjutkan >></button>
+                            <?php if (!in_groups('dokter')) : ?>
+                                <div class="row btnLanjut">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <button class="btn btn-primary float-right lanjut" data-toggle="modal" data-target="#anamnese">Lanjutkan >></button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            <?php endif ?>
                             <hr />
                             <div class="row mb-3">
                                 <div class="col-md-6">

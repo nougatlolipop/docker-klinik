@@ -87,7 +87,7 @@
         <p>Medan, <?= date('d-m-Y') ?></p>
     </div>
     <div class="resep">
-        <?= $data[0]->pemeriksaanTherapy; ?>
+        <?= $data[0]->pemeriksaanResep; ?>
     </div>
     <div class="ttd">
         <p class="name"><?= $data[0]->dokterName; ?></p>

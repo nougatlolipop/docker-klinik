@@ -124,7 +124,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>SIP</label>
-                        <input name="dokterSip" type="number" class="form-control">
+                        <input name="dokterSip" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Nama</label>
@@ -132,7 +132,7 @@
                     </div>
                     <div class="form-group">
                         <label>No. Handphone</label>
-                        <input name="dokterNoHp" type="number" class="form-control">
+                        <input name="dokterNoHp" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Email</label>
@@ -181,7 +181,7 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>SIP</label>
-                            <input name="dokterSip" type="number" class="form-control" value="<?= $edit->dokterSip ?>">
+                            <input name="dokterSip" type="text" class="form-control" value="<?= $edit->dokterSip ?>">
                         </div>
                         <div class="form-group">
                             <label>Nama</label>
@@ -189,7 +189,7 @@
                         </div>
                         <div class="form-group">
                             <label>No. Handphone</label>
-                            <input name="dokterNoHp" type="number" class="form-control" value="<?= $edit->dokterNoHp ?>">
+                            <input name="dokterNoHp" type="text" class="form-control" value="<?= $edit->dokterNoHp ?>">
                         </div>
                         <div class="form-group">
                             <label>Email</label>

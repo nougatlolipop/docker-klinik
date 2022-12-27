@@ -125,6 +125,7 @@ class Pemeriksaan extends BaseController
         $pekerjaan = $data[0]->pasienAccupation;
         $unit = $data[0]->pasienUnit;
         $status = strtoupper($data[0]->pasienStatus);
+        $noId = $data[0]->nik;
 
         $this->spreadsheet = new Spreadsheet();
         $htmlString = '';
@@ -146,6 +147,12 @@ class Pemeriksaan extends BaseController
         $htmlString .= '<td>' . $alamat . '</td>';
         $htmlString .= '<th style="font-weight: bold">STATUS</th>';
         $htmlString .= '<td>' . $status . '</td>';
+        $htmlString .= '</tr>';
+        $htmlString .= '<tr>';
+        $htmlString .= '<th></th>';
+        $htmlString .= '<td></td>';
+        $htmlString .= '<th style="font-weight: bold">NO. IDENTITAS</th>';
+        $htmlString .= '<td>' . $noId . '</td>';
         $htmlString .= '</tr>';
         $htmlString .= '<tr>';
         $htmlString .= '<td></td>';

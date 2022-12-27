@@ -26,6 +26,15 @@
         "pages": ""
     },
     {
+        "id": "5",
+        "nama": "Pasien",
+        "parent": "3",
+        "level": "child",
+        "status": true,
+        "icon": "fas fa-user-injured",
+        "pages": "/pendaftaran"
+    },
+    {
         "id": "4",
         "nama": "Pemeriksaan",
         "parent": "3",
