@@ -156,7 +156,7 @@ $(document).ready(function() {
                         html += '<td align="center">' + no++ + '</td>'
                         html += '<td>' + element.pemeriksaanCreatedDate + '</td>'
                         html += '<td>' + diagnosa + '</td>'
-                        html += '<td align="center"><button button class="btn btn-primary" ' + ((element.pemeriksaanDiagnosa === null) ? 'disabled' : '') + ' onclick = "showMore(' + element.pemeriksaanId + ')" > <i class="fas fa-list-ul"></i> Read more</button > <button class="btn btn-success" ' + ((element.pemeriksaanDiagnosa === null) ? 'disabled' : '') + ' onclick = "exportResep(' + element.pemeriksaanId + ')"><i class="fas fa-pills"></i> Resep</button></td >'
+                        html += '<td align="center"><button button class="btn btn-primary" ' + ((element.pemeriksaanDiagnosa === null) ? 'disabled' : '') + ' onclick = "showMore(' + element.pemeriksaanId + ')" > <i class="fas fa-list-ul"></i> Read more</button > <button class="btn btn-success" ' + ((element.pemeriksaanResep === null) ? 'disabled' : '') + ' onclick = "exportResep(' + element.pemeriksaanId + ',' + '`' + element.pemeriksaanResep + '`' + ')"><i class="fas fa-pills"></i> Resep</button></td >'
                         html += '</tr>'
                     })
                     $('.btnExport').show()
@@ -326,7 +326,12 @@ function showMore(id) {
     })
 }
 
-function exportResep(id) {
+function exportResep(id, data) {
     $('[name="pemeriksaanId"]').val(id)
+    let html = ''
+    html += data;
+    html += '<p class="text-warning"><small>Klik tombol <b>export</b> untuk meng-export resep</small></p>';
+    $('#data-resep').empty()
     $('#resep').modal('show')
+    $('#data-resep').append(html)
 }

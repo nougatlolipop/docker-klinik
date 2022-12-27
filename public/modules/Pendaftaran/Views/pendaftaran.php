@@ -254,16 +254,15 @@
 
 <!-- start modal resep  -->
 <div class="modal fade" role="dialog" id="resep">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Export Resep</h5>
+                <h5 class="modal-title">Resep</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                Silahkan klik tombol <strong>Export</strong> untuk mengexport resep pasien ini
+            <div class="modal-body" id="data-resep">
             </div>
             <form action="/pemeriksaan/resep" method="post">
                 <input type="hidden" name="pemeriksaanId" value="">

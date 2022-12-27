@@ -47,6 +47,9 @@
                             <?php if ($validation->hasError('therapy')) : ?>
                                 <?= view('layout/templateAlertIcon', ['msg' => ['danger', 'fas fa-exclamation', 'Gagal!', $validation->getError('therapy')]]); ?>
                             <?php endif; ?>
+                            <?php if ($validation->hasError('resep')) : ?>
+                                <?= view('layout/templateAlertIcon', ['msg' => ['danger', 'fas fa-exclamation', 'Gagal!', $validation->getError('resep')]]); ?>
+                            <?php endif; ?>
                             <?php if (!empty(session()->getFlashdata('error'))) : ?>
                                 <?= view('layout/templateAlertIcon', ['msg' => ['danger', 'fas fa-check', 'Gagal!', session()->getFlashdata('error')]]); ?>
                             <?php endif; ?>
@@ -122,6 +125,10 @@
                         <div class="form-group">
                             <label>Therapy</label>
                             <textarea name="therapy" class="summernote"><?= $tindakan->pemeriksaanTherapy ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Resep</label>
+                            <textarea name="resep" class="summernote"><?= $tindakan->pemeriksaanResep ?></textarea>
                         </div>
                     </div>
                     <div class="modal-footer bg-whitesmoke br">

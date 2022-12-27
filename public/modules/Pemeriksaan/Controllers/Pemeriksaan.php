@@ -85,6 +85,7 @@ class Pemeriksaan extends BaseController
             'anamnese' => rv('required', ['required' => 'Anamnese Harus Diisi']),
             'diagnosa' => rv('required', ['required' => 'Diagnosa Harus Diisi']),
             'therapy' => rv('required', ['required' => 'Therapy Harus Diisi']),
+            'resep' => rv('required', ['required' => 'Resep Harus Diisi']),
         ];
         if (!$this->validate($rules)) {
             return redirect()->to($url)->withInput();
@@ -93,6 +94,7 @@ class Pemeriksaan extends BaseController
             'pemeriksaanAnamnese' => $this->request->getVar('anamnese'),
             'pemeriksaanDiagnosa' => $this->request->getVar('diagnosa'),
             'pemeriksaanTherapy' => $this->request->getVar('therapy'),
+            'pemeriksaanResep' => $this->request->getVar('resep'),
             'pemeriksaanModifiedBy' => user()->email
         );
 
