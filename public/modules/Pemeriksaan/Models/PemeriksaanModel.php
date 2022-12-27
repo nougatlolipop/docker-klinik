@@ -29,7 +29,7 @@ class PemeriksaanModel extends Model
         if (in_groups('dokter')) {
             $builder->where(['dokter."dokterEmail"' => $email]);
         }
-        $builder->orderBy($this->table . '."pemeriksaanCreatedDate"', 'ASC');
+        $builder->orderBy($this->table . '."pemeriksaanCreatedDate"', 'DESC');
         return $builder;
     }
 
@@ -41,7 +41,7 @@ class PemeriksaanModel extends Model
         $builder->join('poli', 'poli."poliId" = penempatan."poliId"', 'INNER');
         $builder->join('dokter', 'dokter."dokterId" = penempatan."dokterId"', 'INNER');
         $builder->where($where);
-        $builder->orderBy($this->table . '."pemeriksaanCreatedDate"', 'ASC');
+        $builder->orderBy($this->table . '."pemeriksaanCreatedDate"', 'DESC');
         return $builder;
     }
 
