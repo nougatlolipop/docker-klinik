@@ -48,6 +48,7 @@ class Autoload extends AutoloadConfig
         'google/apiclient' => APPPATH . 'google-api/vendor/autoload.php',
         'Myth\Auth'   => APPPATH . 'ThirdParty/myth-auth/src',
         'Michalsn\Uuid' => APPPATH . 'ThirdParty/codeigniter4-uuid/src',
+        'Mpdf'        => APPPATH . 'ThirdParty/mpdf/src',
     ];
 
     /**
