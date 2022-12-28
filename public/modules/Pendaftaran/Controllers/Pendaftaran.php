@@ -33,7 +33,7 @@ class Pendaftaran extends BaseController
             'menu' => $this->fetchMenu(),
             'title' => "Pasien",
             'breadcrumb' => ['Administrasi', 'Pasien'],
-            'pasien' => $this->pasienModel->findAll(),
+            'pasien' => $this->pasienModel->getPasien()->findAll(),
             'penempatan' => $this->penempatanModel->getPenempatan()->findall()
         ];
         // dd($data['rekamMedis']);

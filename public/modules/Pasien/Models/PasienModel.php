@@ -24,6 +24,12 @@ class PasienModel extends Model
         return $builder->get();
     }
 
+    public function getPasien()
+    {
+        $builder = $this->table($this->table);
+        $builder->orderBy('pasienId', 'DESC');
+        return $builder;
+    }
     // public function updateData($where, $data)
     // {
     //     $builder = $this->table($this->table);

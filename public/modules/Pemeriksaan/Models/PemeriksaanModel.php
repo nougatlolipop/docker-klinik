@@ -8,7 +8,7 @@ class PemeriksaanModel extends Model
 {
     protected $table = 'pemeriksaan';
     protected $primaryKey = 'pemeriksaanId';
-    protected $allowedFields = ['pemeriksaanPasienId', 'pemeriksaanPoliId', 'pemeriksaanAnamnese', 'pemeriksaanDiagnosa', 'pemeriksaanTherapy', 'pemeriksaanCreatedBy', 'pemeriksaanCreatedDate', 'pemeriksaanModifiedBy', 'pemeriksaanModifiedDate', 'pemeriksaanDeletedDate', 'pemeriksaanNotes', 'pemeriksaanCost'];
+    protected $allowedFields = ['pemeriksaanPasienId', 'pemeriksaanPoliId', 'pemeriksaanAnamnese', 'pemeriksaanDiagnosa', 'pemeriksaanTherapy', 'pemeriksaanResep', 'pemeriksaanCreatedBy', 'pemeriksaanCreatedDate', 'pemeriksaanModifiedBy', 'pemeriksaanModifiedDate', 'pemeriksaanDeletedDate', 'pemeriksaanNotes', 'pemeriksaanCost'];
     protected $useTimestamps = 'false';
     protected $useSoftDeletes = 'true';
     protected $createdField = 'pemeriksaanCreatedDate';
