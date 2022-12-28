@@ -27,7 +27,7 @@
         <form action="/logout" method="POST">
           <div class="buttons">
             <!-- <a style="display: inline-block;  margin-left: 18px; width:80%;" href="/profile" class="btn btn-icon btn-primary"></i> Profile</a> -->
-            <a style="display: inline-block;  margin-left: 18px; margin-bottom: 20px;" href="/home" class="btn btn-icon btn-secondary"></i> Close</a>
+            <a style="display: inline-block;  margin-left: 18px; margin-bottom: 20px;" href="/dashboard" class="btn btn-icon btn-secondary"></i> Close</a>
             <button type="submit" style="display: inline-block; margin-bottom: 20px;" class="btn btn-icon icon-left btn-danger"><i class="fas fa-sign-out-alt"></i> logout</button>
           </div>
         </form>

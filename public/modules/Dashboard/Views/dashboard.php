@@ -24,7 +24,7 @@
                             <div class="text-center" style="height: 550px;">
                                 <div class="pt-5">
                                     <center>
-                                        <lottie-player src="<?= base_url('lottie/dokter.json') ?>" background="transparent" speed="1" style="width: 700px;" loop autoplay></lottie-player>
+                                        <lottie-player src="<?= base_url('lottie/dokter.json') ?>" background="transparent" speed="1" style="width: 100%; height: 500px;" loop autoplay></lottie-player>
                                     </center>
                                 </div>
                             </div>
